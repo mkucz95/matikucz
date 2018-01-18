@@ -145,67 +145,65 @@ var chinese=[
   }
 ];
 
+var activities=[
+    {
+        what:"UCSD Men's Golf",
+        time:"2014-Present",
+        tasks:["Dedicated team leader and team captain working with coaches and teammates",
+        "Resulted in a motivating, successful environment and improved team culture"],
+        link:"http://www.ucsdtritons.com/ViewArticle.dbml?DB_OEM_ID=5800&ATCLID=209714542"
+    }
+];
+
+var volunteering=[{
+    what:"Volunteer at Best Day Foundation",
+    time:"June 2016",
+    tasks:["Engaged with and supported children with special needs",
+    "Helped the children surf and have fun at the beach and in the water"],
+    link:"https://bestdayfoundation.org/locations/san-diego-county-ca/"
+},
+{
+    what:"Volunteer at Willing Hearts (NGO) - Singapore",
+    time:"March 2013",
+    tasks:["Helped with daily operations",
+    "Food preparation, food delivery around Singapore"],
+    link:"http://www.willinghearts.org.sg/"
+}];
+
  var experience=[
       {
         what:"HR Organizer at Best Day Foundation",
         time:"June 2017 - Present",
-        mainTask:"Develop and expand the volunteer network for the Southern California Chapter of the Best Day Foundation",
-        subTask:"Plan and communicate with the Best Day team to maximize the efficiency and success of each event",
+        tasks:["Develop and expand the volunteer network for the Southern California Chapter of the Best Day Foundation",
+        "Plan and communicate with the Best Day team to maximize the efficiency and success of each event"],
         link:"https://bestdayfoundation.org/locations/san-diego-county-ca/"
     },
-
     {
         what:"Triton Athletics Council Representative",
         time:"2016-Present",
-        mainTask:"Communicates and coordinates between council representative",
-        subTask:"Resulted in successful engagement and improvement in UCSD Athletic's community outreach and networking ",
+        tasks:["Communicates and coordinates between council representative",
+        "Resulted in successful engagement and improvement in UCSD Athletic's community outreach and networking"],
         link:"http://www.ucsdtritons.com/ViewArticle.dbml?ATCLID=187355"
     },
-
-    {
-        what:"UCSD Men's Golf",
-        time:"2014-Present",
-        mainTask:"Dedicated team leader and team captain working with coaches and teammates",
-        subTask:"Resulted in a motivating, successful environment and improved team culture",
-        link:"http://www.ucsdtritons.com/ViewArticle.dbml?DB_OEM_ID=5800&ATCLID=209714542"
-    },
-
     {
         what:"Intern at Wilshire Quinn Capital - San Diego",
         time:"Summer 2016",
-        mainTask:"Involved with daily operation of the income fund",
-        subTask:"Trust deed investing, private money lending, property management, investing, risk minimization strategies, investor relations and communications",
+        tasks:["Involved with daily operation of the income fund",
+        "Trust deed investing, private money lending, property management, investing, risk minimization strategies, investor relations and communications"],
         link:"http://www.wilshirequinn.com/"
     },
-
     {
         what:"Designer and Web-App Developer",
         time:"2017",
-        mainTask:"Coordinated, planned, and exectued the design process, front and back end implementations of the web app",
-        subTask:"Successful and appealing product that met and exceeded all requirements",
+        tasks:["Coordinated, planned, and exectued the design process, front and back end implementations of the web app",
+        "Successful and appealing product that met and exceeded all requirements"],
         link:"https://favor4favour.herokuapp.com/"
     },
-
-     {
-        what:"Volunteer at Best Day Foundation",
-        time:"June 2016",
-        mainTask:"Engaged with and supported children with special needs",
-        subTask:"Helped the children surf and have fun at the beach and in the water",
-        link:"https://bestdayfoundation.org/locations/san-diego-county-ca/"
-    },
-    {
-        what:"Volunteer at Willing Hearts (NGO) - Singapore",
-        time:"March 2013",
-        mainTask:"Helped with daily operations",
-        subTask:"Food preparation, food delivery around Singapore",
-        link:"http://www.willinghearts.org.sg/"
-    },
-
     {
         what:"Prague Model United Nations (MUN) - Chair",
         time:"April 2011",
-        mainTask:"Organizer and co-chair for a 150 person conference.",
-        subTask:"Conference lasted three days and required strong communication and leadership skills",
+        tasks:["Organizer and co-chair for a 150 person conference.",
+        "Conference lasted three days and required strong communication and leadership skills"],
         link:""
     }
 ];
@@ -332,12 +330,20 @@ function addSkill(x, selector){
 }
 function addReference(x, selector){
     let el=document.createElement("tr");
-    el.innerHTML = `<td>${x.name}<i>${x.position}</i></td><td>${x.phone} - ${x.email}</td>`;
+    el.innerHTML = `<td>${x.name} - <i>${x.position}</i></td><td>${x.phone} - ${x.email}</td>`;
     document.querySelector(selector).appendChild(el);
 }
 function addAward(x, selector){
-    let el=document.createElement("tr");
-    el.innerHTML = `<section><a href="${x.link}">${x.title}</a><i>${x.year}</i></section>`;
+    let el=document.createElement("section");
+    el.innerHTML = `<a href="${x.link}">${x.title}</a> - <i>${x.year}</i>`;
+    document.querySelector(selector).appendChild(el);
+}
+function addExperience(x,selector){
+    let el=document.createElement("section");
+    el.innerHTML = `<h3>${x.what}</h3><aside>${x.time}</aside><p>`;
+    let list = document.createElement("ul");
+    x.tasks.forEach(y=>{let listEl = document.createElement("li");listEl.innerHTML=y;list.appendChild(listEl);});
+    el.appendChild(list);
     document.querySelector(selector).appendChild(el);
 }
 function populateExperience(){
@@ -345,6 +351,10 @@ function populateExperience(){
     techskills.forEach(x=>{addSkill(x, "#techskills")});
     tools.forEach(x=>{addSkill(x, "#tools")});
     references.forEach(x=>{addReference(x, "#references")});
+    awards.forEach(x=>{addAward(x, "#awards");});
+    experience.forEach(x=>{addExperience(x,"#work");});
+    activities.forEach(x=>{addExperience(x,"#activities");});
+    volunteering.forEach(x=>{addExperience(x,"#volunteering");});
 }
 
 function populateCourses(){
@@ -360,7 +370,7 @@ function changeEvent(event){
         populateCourses();
     }
     else if(event==="experience"){
-        document.querySelector('main>div').innerHTML="<h1>Skills</h1><ul id='skills'>-</ul><h2>Tools</h2><ul id='tools'>-</ul><h2>Technologies</h2><ul id='techskills'>-</ul><h1>Experience</h1><h1>Activities</h1><article id='awards'><h2>Honours & Awards</h2></article><h2>References</h2><table><tbody id='references'></tbody></table>";
+        document.querySelector('main>div').innerHTML="<h1>Skills</h1><ul id='skills'></ul><h2>Tools</h2><ul id='tools'></ul><h2>Technologies</h2><ul id='techskills'></ul><article id='work'><h1>Experience</h1></article><article id='activities'><h1>Activities</h1></article><article id='volunteering'><h2>Volunteering</h2></article><article id='awards'><h2>Honours & Awards</h2></article><h2>References</h2><table><tbody id='references'></tbody></table>";
         populateExperience();
     }
     else if(event==="about"){
