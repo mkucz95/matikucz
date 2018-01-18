@@ -1,0 +1,24 @@
+
+ .navbar-default{
+ 	color: white;
+	background-color: gray;
+	border-top: 5px solid lightblue;
+ }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+ 	color: #696969;
+ 	background-color: #CCFF99;
+ 	/*F0FFFF for background*/
+ }
+
+
+ @media screen and (max-width: 767px){
+	body{
+		padding-top: 0px;
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	 
+}
+

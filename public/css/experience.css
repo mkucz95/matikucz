@@ -1,0 +1,24 @@
+
+
+/* this style exists to make it obvious that you've successfully linked
+   the CSS to the page. feel free to remove it once the link is working. */
+body {
+     border: 1px dotted gray;
+     padding: 20px;
+}
+
+#blueBadge{
+	background-color: #4578cc;
+	font-size: 15px;
+	padding: 7px;
+}
+
+#blueBadgeSmall{
+	background-color: #4578cc;
+}
+
+#skillList{
+	padding-bottom: 5px;
+}
+
+
