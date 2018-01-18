@@ -4,17 +4,20 @@
   <title>Mati Kucz</title>  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <script src="data.js"></script>
 </head>
 <body>
   <nav>
     <ul>
-       <li id="coursework">Coursework</li>
-       <li id="experience">Experience &amp; References</li>
-       <li id="about">About Me</li>
+      <li onclick="changeEvent('home')">Home</li>
+       <li id="coursework" onclick="changeEvent('coursework')">Coursework</li>
+       <li id="experience" onclick="changeEvent('experience')">Experience &amp; References</li>
+       <li id="about" onclick="changeEvent('about')">About Me</li>
     </ul>
   </nav>
   <header>Mateusz Kucz</header>
   <main>
+    <div>
       <table>
           <tbody>
             <tr><td><a href="http://www.ucsd.edu">UC San Diego</a></td></tr>
@@ -32,6 +35,7 @@
             <p>I work as the HR Coordinator for Best Day Foundation in San Diego which works with special needs children providing them with great outdoors experiences.</p>
             <p>In the future I hope to work with the technology and renewable energy sectors since I am passionate about their growth, development, and possible applications and innovations throughout society.</p>
         </section>
+      </div>
   </main>
   <footer>
       <a href="tel:1-858-260-4579">Phone Number: (858)-260 4579</a>
