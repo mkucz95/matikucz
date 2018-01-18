@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>Mati Kucz</title>  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="css/experience.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+  <link href="css/jumbotron.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  {{> navbar}}
+
+<div class="container">
+  {{> jumbotron}}
+
+     <div class="page-header" id="">    
+      <h4>My Skills</h4>
+    </div>
+
+    <div class="list-group" id="skillList">
+    {{#each skills}}
+        <ul>
+          <li>{{name}}</li>
+        </ul>
+    {{/each}}
+  </div>
+
+  <div class="row">
+  <div class="col-md-6">
+   <div class="page-header" id="">    
+      <h5>Tools</h5>
+    </div>
+        <div class="list-group" id="classList">
+          {{#each toolskills}}
+            <ul>
+              <li>{{name}}</li>
+            </ul>
+          {{/each}}
+    </div>
+</div>
+
+  <div class="col-md-6">
+    <div class="page-header" id="">    
+      <h5>Technologies</h5>
+    </div>
+      <div class="list-group" id="techskills">
+        {{#each techskills}}
+       <ul>
+          <li>{{name}}</li>
+        </ul>
+       {{/each}}
+    </div>
+</div>
+</div>
+
+    <div class="page-header experience-link" id="letters">    
+      <h4>My Experience
+       <!-- <a href="recommendations.html" id="link">
+         <small>Click for recommendation letters.</small>
+       </a>-->
+     </h4>
+   </div>
+
+   <div class="list-group">
+    {{#each experience}}
+    <a class="list-group-item">
+      <h5 class="list-group-item-heading">{{what}}:</h5> <span class="badge" id="blueBadge">{{time}}</span>
+      <p class="list-group-item-text">
+        <ul>
+          <li>{{mainTask}}</li>
+          <li> {{subTask}} </li>
+        </ul>
+      </p>
+    </a>
+    {{/each}}
+
+  </div>
+
+  <div class="page-header" id="">    
+    <h4>My Awards</h4>
+  </div>
+
+
+  <ul class="list-group">
+    {{#each awards}}
+    <a href="{{link}}"
+    <li class="list-group-item">
+      <span class="badge" id="blueBadgeSmall">{{year}}</span>
+      {{title}}
+    </li>
+  </a>
+  {{/each}}
+</ul>
+
+<div class="page-header" id="references">    
+  <h4>My References</h4>
+</div>
+
+<div class= "references">
+  <div class="row">
+  {{#each references}}
+  <div class="col-md-6">
+  <div class="panel panel-info">
+    <div class="panel-heading"><h7 class="panel-title">{{name}}: </h7> <small>{{position}}</small></div>
+    <div class="panel-body">
+     <a href="mailto:{{email}}?subject=Regarding Mateusz Kucz" target="_blank">{{email}}</a>, <a href="tel:1-{{phone}}">{{phone}}</a>
+   </div>
+ </div>
+</div>
+ {{/each}}
+</div>
+</div>
+
+</div> <!-- container-->
+
+    {{> commonJS}}
+
+</body>
+</html>

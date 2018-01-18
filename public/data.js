@@ -1,4 +1,4 @@
-const econ = [
+var econ = [
       { 
         type="Econometrics Series",
         id="econometrics",
@@ -318,4 +318,34 @@ var chinese=[
         year="2011",
         link=""
     }
-    ];
+];
+
+function populateCourses(){
+ //TODO
+}
+
+function changeEvent(event){
+    if(event==="coursework"){
+        document.getElementsByTagName('main').innerHTML = education+econCourses+cseCourses+mathCourses+chinCourses;
+        populateCourses();
+    }
+    else if(event==="experience"){
+        document.getElementsByTagName('main').innerHTML;
+    }
+    else if(event==="about"){
+        document.getElementsByTagName('main');
+    }
+}
+const education = "<div id='education'><h2>Education</h2><dl><dt> <strong>University of California, San Diego (UCSD) </strong> - Expected June 2018 </dt><dd> B.S. in Management Science</dd><dd> Minor in Computer Science</dd><dt> GPA </dt><dd>Overall: 3.72 - Major GPA: 3.84, Minor GPA: 3.71</dd><dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd><dt> International School of Prague</dt></dl></div>";
+const econCourses = "<article><h4 id='econCourses'>Economics Coursework</h4><section>classes go here</section></article>";
+const cseCourses = "<article><h4 id='cseCourses'>Computer Science Coursework</h4><section>classes go here</section></article>";
+const mathCourses = "<article><h4 id='mathCourses'>Mathematics Coursework</h4><section>classes go here</section></article>";
+const chinCourses = "<article><h4 id='chinCourses'>Chinese Language Coursework</h4><section>classes go here</section></article>";
+
+var navBar=['coursework', 'experience', 'about'];
+window.onload = function(){
+    for(let i=0;i<navBar.length; i++){
+        document.querySelector(`#${navBar[i]}`).addEventListener('click', changeEvent(`${navBar[i]}`));      
+        console.log(`clickListener: ${navBar[i]}`)
+    }
+}
