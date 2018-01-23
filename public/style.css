@@ -4,6 +4,8 @@ body{
     padding:0 1rem 2rem 1rem;
     background-color:#F2F2F2;
 }
+a, a:visited, a:hover,a:active{color:inherit;}
+
 /*navbar*/
 nav>ul, footer{
     border: 2px solid rgb(235, 230, 230);
@@ -11,7 +13,7 @@ nav>ul, footer{
     border-top:5px solid lightblue;
     border-radius: 6px;
 }
-nav>ul>li, footer>a, footer>aside{
+nav>ul>li, footer>a, footer>aside, header>ul>li{
     display:inline-flex;
     padding:0.5rem 1rem;
     color:rgb(111, 109, 109);
@@ -21,8 +23,50 @@ nav>ul>li:active, nav>ul>li:hover{
 }
 
 header{
-    background-image:url("background.jpg");
-    background-color:transparent;
+    position: relative;
+    background-color:rgb(230, 230, 238);
+    overflow:hidden;
+    padding:0.5rem 1rem;
+    border:solid 5px rgb(230, 230, 238);
+    border-radius:7px;
+    font-size: 2rem;
+    font-weight:200;
+    line-height: 2.15;
+    color:black;
+}
+img{
+    max-width: 8rem;
+    max-height: 10rem;
+    width:auto;
+    height:auto;
+    float:left;
+    padding:0 1.5rem 1.5rem 0;
+}
+/*header::after{
+    content:"";
+    display:block;
+    position: absolute;
+    background-image:url("bg3.jpg");
+    opacity:0.1;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+}*/
+
+header ul{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    margin:0;
+    padding:0;
+}
+
+header>ul>li{
+    padding:0 1rem;
 }
 
 footer{
