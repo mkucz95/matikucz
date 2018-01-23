@@ -16,6 +16,14 @@ nav>ul>li, footer>a, footer>aside{
     padding:0.5rem 1rem;
     color:rgb(111, 109, 109);
 }
+nav>ul>li:active, nav>ul>li:hover{
+    background-color:rgb(230, 230, 238);
+}
+
+header{
+    background-image:url("background.jpg");
+    background-color:transparent;
+}
 
 footer{
     background-color: #F2F2F2;
