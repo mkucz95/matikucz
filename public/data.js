@@ -350,11 +350,14 @@ function populateExperience(){
     skills.forEach(x=>{addSkill(x, "#skills")});
     techskills.forEach(x=>{addSkill(x, "#techskills")});
     tools.forEach(x=>{addSkill(x, "#tools")});
-    references.forEach(x=>{addReference(x, "#references")});
     awards.forEach(x=>{addAward(x, "#awards");});
     experience.forEach(x=>{addExperience(x,"#work");});
     activities.forEach(x=>{addExperience(x,"#activities");});
     volunteering.forEach(x=>{addExperience(x,"#volunteering");});
+}
+
+function populateRefs(){
+    references.forEach(x=>{addReference(x, "#references")});
 }
 
 function populateCourses(){
@@ -370,13 +373,16 @@ function changeEvent(event){
         populateCourses();
     }
     else if(event==="experience"){
-        document.querySelector('main>div').innerHTML="<h1>Skills</h1><ul id='skills'></ul><h2>Tools</h2><ul id='tools'></ul><h2>Technologies</h2><ul id='techskills'></ul><article id='work'><h1>Experience</h1></article><article id='activities'><h1>Activities</h1></article><article id='volunteering'><h2>Volunteering</h2></article><article id='awards'><h2>Honours & Awards</h2></article><h2>References</h2><table><tbody id='references'></tbody></table>";
+        document.querySelector('main>div').innerHTML="<h1>Skills</h1><ul id='skills'></ul><h2>Tools</h2><ul id='tools'></ul><h2>Technologies</h2><ul id='techskills'></ul><article id='work'><h1>Experience</h1></article><article id='activities'><h1>Activities</h1></article><article id='volunteering'><h2>Volunteering</h2></article><article id='awards'><h2>Honours & Awards</h2></article>";
         populateExperience();
     }
     else if(event==="about"){
-        document.querySelector('main>div').innerHTML; 
+        document.querySelector('main>div').innerHTML=about; 
     }else if(event==="home"){
         document.querySelector('main>div').innerHTML=home;
+    }else if(event==="references"){
+        document.querySelector('main>div').innerHTML="<h1>References</h1><table><tbody id='references'></tbody></table>"; 
+        populateRefs();
     }
 }
 const education = "<div id='education'><h1>Education</h1><dl><dt><strong>University of California, San Diego (UCSD) </strong> - Expected June 2018 </dt><dd> B.S. in Management Science</dd><dd> Minor in Computer Science</dd><dt> GPA </dt><dd>Overall: 3.72 - Major GPA: 3.84, Minor GPA: 3.71</dd><dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd><dt> International School of Prague</dt></dl></div>";
@@ -385,3 +391,4 @@ const cseCourses = "<article id='cseCourses'><h2>Computer Science Coursework</h2
 const mathCourses = "<article id='mathCourses'><h2>Mathematics Coursework</h2><section>classes go here</section></article>";
 const chinCourses = "<article id='chinCourses'><h2>Chinese Language Coursework</h2><section>classes go here</section></article>";
 const home="<table><tbody><tr><td><a href='http://www.ucsd.edu'>UC San Diego</a></td></tr><tr><td><a href='http://www.ucsdtritons.com/SportSelect.dbml?DB_OEM_ID=5800&SPID=2343&SPSID=29950'>UCSD Golf</a></td></tr><tr><td><a href='http://economics.ucsd.edu/undergraduate-program/major-minor-requirements/mgmt-sci.html'>Management B.S.</a></td></tr><tr><td><a href='https://cse.ucsd.edu/undergraduate/degree-programs/minor-computer-science'>Computer Science Minor</a></td></tr><tr><td><a href='http://www.github.com/mkucz95'>My GitHub</a></td></tr><tr><td><a href='https://bestdayfoundation.org/'>Best Day Foundation</a></td></tr></tbody></table><section><h2>Current:</h2><p>I am currently studying for a B.S. in Management Science in my 4th year at UC San Diego with a minor in Computer Science. I am also a team capitain for the UCSD Men's Golf team.</p><p>I work as the HR Coordinator for Best Day Foundation in San Diego which works with special needs children providing them with great outdoors experiences.</p><p>In the future I hope to work with the technology and renewable energy sectors since I am passionate about their growth, development, and possible applications and innovations throughout society.</p></section>";
+const about="<article><h1>About Me</h1><section><p>I am currently a student at UC San Diego in my fourth year. I am a passionate golfer and I am proud to be on the UCSD Men's Golf Team. I chose UC San Diego because of it's renowned academic caliber in the fields that interest me most - economics and computer science. The perfect weather and location, challenging intellectual environment, and demanding collegiate golf are all factors that have contributed to my progress and success as a student-athlete and person. I would like to work with businesses, investments, and technologies that deal with social and environmental causes around the world. It is a goal of mine to eventually utilize the languages I know throughout my career. <p>I enjoy cooking and all kinds of outdoor activities in my free time. As a California resident, I started to surf two years ago. I also enjoy tennis, basketball, volleyball, table tennis, hiking, or just being at the beach. I am also a passionate traveller and I hope to make it to three new places every year. South America and Africa are the next two continents I have set my sights on. San Diego, CA - is the 6th city in the 6th different country that I have lived in.</p></section></article>"

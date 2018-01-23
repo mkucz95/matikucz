@@ -1,0 +1,27 @@
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    padding:0 1rem 2rem 1rem;
+    background-color:#F2F2F2;
+}
+/*navbar*/
+nav>ul, footer{
+    border: 2px solid rgb(235, 230, 230);
+    color: #FFF;
+    border-top:5px solid lightblue;
+    border-radius: 6px;
+}
+nav>ul>li, footer>a, footer>aside{
+    display:inline-flex;
+    padding:0.5rem 1rem;
+    color:rgb(111, 109, 109);
+}
+
+footer{
+    background-color: #F2F2F2;
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin:0 2rem;
+}
