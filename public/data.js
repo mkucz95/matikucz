@@ -1,130 +1,107 @@
 var econ = [
       { 
         type:"Econometrics",
-        id:"econometrics",
         code:"ECON 120A, 120B, 120C",
         description:"Probability and statistics used in economics. Probability and sampling theory, statistical inference, and use of spreadsheets. Basic econometric methods, including the linear regression, hypothesis testing, quantifying uncertainty using confidence intervals, and distinguishing correlation from causality. Advanced econometric methods: estimation of linear regression models with endogeneity, economic methods designed for panel data sets, estimation of discrete choice models, time series analysis, and estimation in the presence of autocorrelated and heterskedastic errors."
       },
     { 
-        type:"Intermediate Microeconomics",
-        id:"micro",
-        code:"ECON 100A, 100B, 100C",
+        type:"Microeconomics",
+        code:"ECON 1, 100A, 100B, 100C",
         description:"Economic analysis of household determination of the demand for goods and services, consumption/saving decisions, and the supply of labor. Analysis of firms’ production and costs, the supply of output and demand factors of production. Analysis of perfectly competitive markets. Analysis of the effects of imperfect market structure, strategy, and imperfect information."
       },
      { 
-        type:"Intermediate Macroeconomics",
-        id:"macro",
-        code:"ECON 110A, 110B",
+        type:"Macroeconomics",
+        code:"ECON 3, 110A, 110B",
         description:"Analysis of the determination of long run growth and models of the determination of output, interest rates, and the price level. Analysis of inflation, unemployment, and monetary and fiscal policy. '\n'Analysis of the determination of consumption spending at the aggregate level; extension of the basic macro model to include exchange rates and international trade; the aggregate money supply, and the business cycle."
-      },
-      { 
-        type:"Principles of Microeconomics",
-        id:"introMicro",
-        code:"ECON 1",
-        description:"Introduction to the study of the economic system. Course will introduce the standard economic models used to examine how individuals and firms make decisions in perfectly competitive markets, and how these decisions affect supply and demand in output markets."
-      },
-
-      { 
-        type:"Principles of Macroeconomics",
-        id:"introMacro",
-        code:"ECON 3",
-        description:"Introductory macroeconomics: unemployment, inflation, business cycles, monetary and fiscal policy."
-      },
+           },
        { 
         type:"Decisions under Uncertainty",
-        id:"uncertainty",
         code:"ECON 171",
         description:"Decision making when the consequences are uncertain. Decision trees, payoff tables, decision criteria, expected utility theory, risk aversion, sample information."
       },
        { 
         type:"Financial Accounting",
-        id:"financialAccounting",
         code:"ECON 4",
-        description:""
+        description:"Recording, organizing, and communicating financial information relating to business entities."
       },
       { 
         type:"Financial Markets",
-        id:"financialMarkets",
         code:"ECON 173A",
         description:"Financial market functions, institutions and instruments: stocks, bonds, cash instruments, derivatives (options), etc. Discussion of no-arbitrage arguments, as well as investors’ portfolio decisions and the basic risk-return trade-off established in market equilibrium."
       },
       { 
         type:"Operations Research",
-        id:"oeprationsResearch",
-        code:"ECON 172A",
-        "description":"Linear and integer programming, elements of zero-sum, two-person game theory, and specific combinatorial algorithms."
+        code:"ECON 172A, 172B",
+        description:"Linear and integer programming, elements of zero-sum, two-person game theory, and specific combinatorial algorithms."
+      },
+      { 
+        type:"Economic and Business Forecasting",
+        code:"ECON 178",
+        description:"Survey of theoretical and practical aspects of statistical and economic forecasting. Such topics as long-run and short-run horizons, leading indicator analysis, econometric models, technological and population forecasts, forecast evaluation, and the use of forecasts for public policy."
       }
 ];
 
 var cse=[
     {
         type:"Introduction to Programming (C)",
-        id: "CSE5A",
         code:"CSE 5A",
         description:"Introduction to algorithms and top-down problem solving. Introduction to the C language, including functions, arrays, and standard libraries. Basic skills for using a PC graphical user interface operating system environment. File maintenance utilities are covered."
     },
      {
         type:"Intoduction to OOP - Java",
-        id: "CSE11",
         code:"CSE 11",
         description:"An accelerated introduction to computer science and programming using the Java language. Basic UNIX. Modularity and abstraction. Documentation, testing and verification techniques. Basic object-oriented programming, including inheritance and dynamic binding. Exception handling. Event-driven programming. Experience with AWT library or other similar library. "
     },
-
     {
         type:"Basic Data Structures and OOD",
-        id: "CSE12",
         code:"CSE 12",
         description:"Use and implementation of basic data structures including linked lists, stacks, and queues. Use of advanced structures such as binary trees and hash tables. Object-oriented design including interfaces, polymorphism, encapsulation, abstract data types, pre-/post-conditions. Recursion. Uses Java and Java Collections."
     },
-
     {
         type:"Computer Organization and Systems Programming",
-        id: "CSE30",
         code:"CSE 30",
         description:"Introduction to organization of modern digital computers—understanding the various components of a computer and their interrelationships. Study of a specific architecture/machine with emphasis on systems programming in C and Assembly languages in a UNIX environment. "
     },
     {
         type:"Advanced Data Structures",
-        id: "CSE100",
         code:"CSE 100",
         description:"High-performance data structures and supporting algorithms. Use and implementation of data structures like (un)balanced trees, graphs, priority queues, and hash tables. Also memory management, pointers, recursion. Theoretical and practical performance analysis, both average case and amortized. Uses C++ and STL."
     },
     {
         type:"Software Engineering",
-        id: "CSE110",
         code:"CSE 110",
         description:"Introduction to software development and engineering methods, including specification, design, implementation, testing, and process. An emphasis on team development, agile methods, and use of tools such as IDE's, version control, and test harnesses."
     },
     {
         type:"Introduction to Human-Computer Interaction Design",
-        id: "CSE170",
         code:"CSE 170",
         description:"Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: Work with a team on a quarter-long design project."
-    }
+    },
+    {
+        type:"Web Client Languages",
+        code:"CSE 134B",
+        description:"Design and implementation of interactive World Wide Web clients using helper applications and plug-ins. Covers speed optimization and security concerns"
+    },
 ];
 
 var math = [
   {
     type:"Calculus for Science and Engineering",
-    id: "MATH20AB",
     code:"MATH 20A, 20B",
     description:"Foundations of differential and integral calculus of one variable. Functions, graphs, continuity, limits, derivative, tangent line. Applications with algebraic, exponential, logarithmic, and trigonometric functions. Integral calculus of one variable and its applications, with exponential, logarithmic, hyperbolic, and trigonometric functions. Methods of integration. Infinite series. Polar coordinates in the plane and complex exponentials."
   },
    {
     type:"Calculus and Analytic Geometry for Science and Engineering",
-    id: "MATH20C",
     code:"MATH 20C",
     description:"Vector geometry, vector functions and their derivatives. Partial differentiation. Maxima and minima. Double integration."
   },
   {
     type:"Linear Algebra",
-    id: "MATH20F",
     code:"MATH 20F",
     description:"Matrix algebra, Gaussian elimination, determinants. Linear and affine subspaces, bases of Euclidean spaces. Eigenvalues and eigenvectors, quadratic forms, orthogonal matrices, diagonalization of symmetric matrices. Applications. Computing symbolic and graphical solutions using Matlab."
   },
    {
     type:"Intro to Discrete Mathematics",
-    id: "MATH15A",
     code:"MATH 15A",
     description:"Basic discrete mathematical structure: sets, relations, functions, sequences, equivalence relations, partial orders, and number systems. Methods of reasoning and proofs: propositional logic, predicate logic, induction, recursion, and pigeonhole principle. Infinite sets and diagonalization. Basic counting techniques; permutation and combinations. Applications will be given to digital logic design, elementary number theory, design of programs, and proofs of program correctness."
    }
@@ -133,15 +110,13 @@ var math = [
 var chinese=[
   {
     type:"First Year Chinese - Non-Native Series",
-    id: "CHINN",
     code:"CHIN 10AN, 10BN, 10CN",
     description:"Introductory course of basic Chinese for students with no background in Chinese. Curriculum for entry-level Chinese in communicative skills. Covers pronunciation, fundamentals of Chinese grammar, and vocabulary. Topics include greetings, family affairs, numbers, and daily exchanges. Also covers pronunciation, more elaborate grammar, and vocabulary. Focus on goal-oriented tasks: school life, shopping, and transportation.Continuation course of basic Chinese for students with no background in Chinese. Expansion on pronunciation and more elaborate Chinese grammar and increasing vocabulary. Topics include dining, direction, and social life."
   },
   {
-    type:"First Year Chinese - Non-Native Series",
-    id: "CHINN",
-    code:"CHIN 10AN, 10BN, 10CN",
-    description:"Introductory course of basic Chinese for students with no background in Chinese. Curriculum for entry-level Chinese in communicative skills. Covers pronunciation, fundamentals of Chinese grammar, and vocabulary. Topics include greetings, family affairs, numbers, and daily exchanges. Also covers pronunciation, more elaborate grammar, and vocabulary. Focus on goal-oriented tasks: school life, shopping, and transportation.Continuation course of basic Chinese for students with no background in Chinese. Expansion on pronunciation and more elaborate Chinese grammar and increasing vocabulary. Topics include dining, direction, and social life."
+    type:"Second Year Chinese - Non-Native Series",
+    code:"CHIN 20AN, 20BN, 20CN",
+    description:"Covers sentence structure, idiomatic expression, development of listening, speaking, reading, and written competence in Chinese."
   }
 ];
 
@@ -390,7 +365,7 @@ function changeEvent(event){
         populateRefs();
     }
 }
-const education = "<div id='education'><h1>Education</h1><dl><dt><strong>University of California, San Diego (UCSD) </strong> - Expected June 2018 </dt><dd> B.S. in Management Science</dd><dd> Minor in Computer Science</dd><dt> GPA </dt><dd>Overall: 3.72 - Major GPA: 3.84, Minor GPA: 3.71</dd><dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd><dt> International School of Prague</dt></dl></div>";
+const education = "<div id='education'><h1>Education</h1><dl><dt><strong>University of California, San Diego (UCSD) </strong> - Expected June 2018 </dt><dd> B.S. in Management Science</dd><dd> Minor in Computer Science</dd><dt> GPA </dt><dd>Overall: 3.72 - Major GPA: 3.84, Minor GPA: 3.71</dd><dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd></dl></div>";
 const econCourses ="<article class='coursework' id='econCourses'><h2>Economics Coursework</h2></article>";
 const cseCourses = "<article class='coursework' id='cseCourses'><h2>Computer Science Coursework</h2></article>";
 const mathCourses = "<article class='coursework' id='mathCourses'><h2>Mathematics Coursework</h2></article>";
