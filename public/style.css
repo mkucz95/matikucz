@@ -21,6 +21,9 @@ nav>ul>li, footer>a, footer>aside, header>ul>li{
 nav>ul>li:active, nav>ul>li:hover{
     background-color:rgb(230, 230, 238);
 }
+h3~p{
+    display:none;
+}
 
 header{
     position: relative;
@@ -29,11 +32,23 @@ header{
     padding:0.5rem 1rem;
     border:solid 5px rgb(230, 230, 238);
     border-radius:7px;
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight:200;
-    line-height: 2.15;
+    line-height: 1.8;
     color:black;
 }
+h1, h2, h3, h4{
+    line-height: 2;
+    color:black;
+}
+.coursework{
+    display:inline-block;
+    margin:1rem;
+}
+h3{font-size:0.7rem;font-weight:200; line-height:1}
+h2{font-size: 1.3rem;font-weight:300;}
+h1{font-size: 1.4rem;font-weight:400;}
+
 img{
     max-width: 8rem;
     max-height: 10rem;
@@ -60,20 +75,21 @@ img{
 
 header ul{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size:14px;
+    font-size:0.6rem;
     margin:0;
     padding:0;
 }
 
 header>ul>li{
-    padding:0 1rem;
+    padding:0 0.8rem;
 }
 
 footer{
     background-color: #F2F2F2;
+    font-size:0.6rem;
     position:fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin:0 2rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top:-1rem;
 }

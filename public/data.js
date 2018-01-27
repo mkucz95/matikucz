@@ -320,8 +320,13 @@ var volunteering=[{
 function createEl(x, selector){
     console.log(x+": "+selector);
     let el = document.createElement("section");
-    el.innerHTML=`<h5>${x.type}: ${x.code}</h5><p>${x.description}`;
+    el.innerHTML=`<h3 onclick=changeView(this)>${x.type}: ${x.code}</h3><p>${x.description}</p>`;
     document.getElementById(selector).appendChild(el);
+}
+function changeView(element){
+    let p=element.nextElementSibling;
+    if(p.style.display=='block')p.style.display='none';
+    else p.style.display='block';
 }
 function addSkill(x, selector){
     let el=document.createElement("li");
@@ -386,9 +391,9 @@ function changeEvent(event){
     }
 }
 const education = "<div id='education'><h1>Education</h1><dl><dt><strong>University of California, San Diego (UCSD) </strong> - Expected June 2018 </dt><dd> B.S. in Management Science</dd><dd> Minor in Computer Science</dd><dt> GPA </dt><dd>Overall: 3.72 - Major GPA: 3.84, Minor GPA: 3.71</dd><dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd><dt> International School of Prague</dt></dl></div>";
-const econCourses ="<article id='econCourses'><h2>Economics Coursework</h2></article>";
-const cseCourses = "<article id='cseCourses'><h2>Computer Science Coursework</h2></article>";
-const mathCourses = "<article id='mathCourses'><h2>Mathematics Coursework</h2></article>";
-const chinCourses = "<article id='chinCourses'><h2>Chinese Language Coursework</h2></article>";
+const econCourses ="<article class='coursework' id='econCourses'><h2>Economics Coursework</h2></article>";
+const cseCourses = "<article class='coursework' id='cseCourses'><h2>Computer Science Coursework</h2></article>";
+const mathCourses = "<article class='coursework' id='mathCourses'><h2>Mathematics Coursework</h2></article>";
+const chinCourses = "<article class='coursework' id='chinCourses'><h2>Chinese Language Coursework</h2></article>";
 const home="<article><img src='headshot.jpg'><section><h2>Current:</h2><p>I am currently studying for a B.S. in Management Science in my 4th year at UC San Diego with a minor in Computer Science. I am also a team capitain for the UCSD Men's Golf team.</p><p>I work as the HR Coordinator for Best Day Foundation in San Diego which works with special needs children providing them with great outdoors experiences.</p><p>In the future I hope to work with the technology and renewable energy sectors since I am passionate about their growth, development, and possible applications and innovations throughout society.</p></section></article>";
 const about="<article><h1>About Me</h1><section><p>I am currently a student at UC San Diego in my fourth year. I am a passionate golfer and I am proud to be on the UCSD Men's Golf Team. I chose UC San Diego because of it's renowned academic caliber in the fields that interest me most - economics and computer science. The perfect weather and location, challenging intellectual environment, and demanding collegiate golf are all factors that have contributed to my progress and success as a student-athlete and person. I would like to work with businesses, investments, and technologies that deal with social and environmental causes around the world. It is a goal of mine to eventually utilize the languages I know throughout my career. <p>I enjoy cooking and all kinds of outdoor activities in my free time. As a California resident, I started to surf two years ago. I also enjoy tennis, basketball, volleyball, table tennis, hiking, or just being at the beach. I am also a passionate traveller and I hope to make it to three new places every year. South America and Africa are the next two continents I have set my sights on. San Diego, CA - is the 6th city in the 6th different country that I have lived in.</p></section></article>"
