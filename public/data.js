@@ -224,7 +224,7 @@ var volunteering=[{
 
         {
         name:"Matthew Mielke",
-        position:"Senior Account Manager - Wilsher Quinn",
+        position:"Senior Account Manager - Wilsher Quinn Captial",
         email:"mmielke@wilshirequinn.com",
         phone:"619-872-6000"
         }
@@ -310,7 +310,7 @@ function addSkill(x, selector){
 }
 function addReference(x, selector){
     let el=document.createElement("tr");
-    el.innerHTML = `<td>${x.name} - <i>${x.position}</i></td><td>${x.phone} - ${x.email}</td>`;
+    el.innerHTML = `<dt>${x.name}</dt><dd>${x.position}</dd><dd>${x.phone}</dd><dd>${x.email}</dd>`;
     document.querySelector(selector).appendChild(el);
 }
 function addAward(x, selector){
@@ -361,11 +361,11 @@ function changeEvent(event){
     }else if(event==="home"){
         document.querySelector('main>div').innerHTML=home;
     }else if(event==="references"){
-        document.querySelector('main>div').innerHTML="<h1>References</h1><table><tbody id='references'></tbody></table>"; 
+        document.querySelector('main>div').innerHTML="<h1>References</h1><dl id='references'></dl>"; 
         populateRefs();
     }
 }
-const education = "<div id='education'><h1>Education</h1><dl><dt><strong>University of California, San Diego (UCSD) </strong> - Expected June 2018 </dt><dd> B.S. in Management Science</dd><dd> Minor in Computer Science</dd><dt> GPA </dt><dd>Overall: 3.72 - Major GPA: 3.84, Minor GPA: 3.71</dd><dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd></dl></div>";
+const education = "<div id='education'><h1>Education</h1><dl><dt><strong>University of California, San Diego (UCSD) </strong> - Expected June 2018 </dt><dd> B.S. in Management Science</dd><dd> Minor in Computer Science</dd><dd>Overall GPA: 3.72/4.00 - Major GPA: 3.84, Minor GPA: 3.71</dd><dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd></dl></div>";
 const econCourses ="<article class='coursework' id='econCourses'><h2>Economics Coursework</h2></article>";
 const cseCourses = "<article class='coursework' id='cseCourses'><h2>Computer Science Coursework</h2></article>";
 const mathCourses = "<article class='coursework' id='mathCourses'><h2>Mathematics Coursework</h2></article>";

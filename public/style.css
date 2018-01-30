@@ -3,6 +3,7 @@ body{
     font-size:14px;
     padding:0 1rem 2rem 1rem;
     background-color:#F2F2F2;
+    margin-bottom:2rem;
 }
 a, a:visited, a:hover,a:active{color:inherit;}
 
@@ -18,9 +19,7 @@ nav>ul>li, footer>a, footer>aside, header>ul>li{
     padding:0.5rem 1rem;
     color:rgb(111, 109, 109);
 }
-nav>ul>li:active, nav>ul>li:hover{
-    background-color:rgb(230, 230, 238);
-}
+nav>ul>li:active, nav>ul>li:hover{background-color:rgb(230, 230, 238);}
 h3~p{
     display:none;
     font-size:0.6rem;
@@ -28,16 +27,14 @@ h3~p{
     font-weight: 200;
     max-width: 17rem;
 }
-#education dt{
-    font-weight:400;
-    line-height:2;
-}
-#education dd{
+#education dt, #references dt{font-weight:400;line-height:2;}
+#education dd, #references dd{
     font-style: italic;
     display:inline-block;
     font-weight:200;
 }
-
+#references dt{font-weight:bolder;margin-top:1rem;}
+#references dt::before{content:"";margin-right:0.2rem;border-right:0.2rem solid rgb(85, 171, 247);}
 header{
     position: relative;
     background-color:rgb(230, 230, 238);
@@ -50,11 +47,7 @@ header{
     line-height: 1.8;
     color:black;
 }
-h1, h2, h3, h4{
-    line-height: 2;
-    color:black;
-}
-
+h1, h2, h3, h4{line-height: 2;color:black;}
 h2{border-bottom:0.2rem solid rgb(85, 171, 247);}
 h1{border-bottom:0.2rem solid rgb(58, 43, 190);}
 .coursework{
@@ -70,10 +63,11 @@ h1{border-bottom:0.2rem solid rgb(58, 43, 190);}
 h3{font-size:0.7rem;font-weight:200; line-height: 1.5;}
 h2{font-size: 1.3rem;font-weight:300;}
 h1{font-size: 1.4rem;font-weight:400;}
+#work h3, #activities h3, #volunteering h3{font-size:1.1rem;font-weight:300; line-height: 1.2; display:inline-block;margin:0.5rem 0 0 0;}
 .coursework h2{margin:0 0 1rem 0;line-height: 1.5;}
 .coursework h3{margin:0;}
-
-
+#work aside, #volunteering aside, #activities aside{display:inline-block;font-weight:200; margin-left:1rem;}
+#awards a{line-height:1.8;font-weight:250; text-decoration: none;}
 img{
     max-width: 8rem;
     max-height: 10rem;
@@ -82,21 +76,6 @@ img{
     float:left;
     padding:0 1.5rem 1.5rem 0;
 }
-/*header::after{
-    content:"";
-    display:block;
-    position: absolute;
-    background-image:url("bg3.jpg");
-    opacity:0.1;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 0;
-}*/
 
 header ul{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -104,10 +83,7 @@ header ul{
     margin:0;
     padding:0;
 }
-
-header>ul>li{
-    padding:0 0.8rem;
-}
+header>ul>li{padding:0 0.8rem;}
 
 footer{
     background-color: #F2F2F2;
