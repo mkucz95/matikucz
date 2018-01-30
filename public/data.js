@@ -41,6 +41,7 @@ var econ = [
       }
 ];
 
+const defaultImg='headshot.jpg';
 var cse=[
     {
         type:"Introduction to Programming (C)",
@@ -131,14 +132,14 @@ var activities=[
 ];
 
 var volunteering=[{
-    what:"Volunteer at Best Day Foundation",
+    what:"Best Day Foundation",
     time:"June 2016",
     tasks:["Engaged with and supported children with special needs",
     "Helped the children surf and have fun at the beach and in the water"],
     link:"https://bestdayfoundation.org/locations/san-diego-county-ca/"
 },
 {
-    what:"Volunteer at Willing Hearts (NGO) - Singapore",
+    what:"Willing Hearts (NGO) - Singapore",
     time:"March 2013",
     tasks:["Helped with daily operations",
     "Food preparation, food delivery around Singapore"],
@@ -356,10 +357,8 @@ function changeEvent(event){
         document.querySelector('main>div').innerHTML="<article><section id='skills'><h1>Skills</h1><ul></ul></section><section id='tools'><h2>Tools</h2><ul></ul></section><section id='techskills'><h2>Technologies</h2><ul></ul></section></article><article id='work'><h1>Experience</h1></article><article id='activities'><h1>Activities</h1></article><article id='volunteering'><h2>Volunteering</h2></article><article id='awards'><h2>Honours & Awards</h2></article>";
         populateExperience();
     }
-    else if(event==="about"){
-        document.querySelector('main>div').innerHTML=about; 
-    }else if(event==="home"){
-        document.querySelector('main>div').innerHTML=home;
+    else if(event==="home"){
+        document.querySelector('main>div').innerHTML=home+about;
     }else if(event==="references"){
         document.querySelector('main>div').innerHTML="<h1>References</h1><dl id='references'></dl>"; 
         populateRefs();
@@ -370,5 +369,5 @@ const econCourses ="<article class='coursework' id='econCourses'><h2>Economics C
 const cseCourses = "<article class='coursework' id='cseCourses'><h2>Computer Science Coursework</h2></article>";
 const mathCourses = "<article class='coursework' id='mathCourses'><h2>Mathematics Coursework</h2></article>";
 const chinCourses = "<article class='coursework' id='chinCourses'><h2>Chinese Language Coursework</h2></article>";
-const home="<article><img src='headshot.jpg'><section><h2>Current:</h2><p>I am currently studying for a B.S. in Management Science in my 4th year at UC San Diego with a minor in Computer Science. I am also a team capitain for the UCSD Men's Golf team.</p><p>I work as the HR Coordinator for Best Day Foundation in San Diego which works with special needs children providing them with great outdoors experiences.</p><p>In the future I hope to work with the technology and renewable energy sectors since I am passionate about their growth, development, and possible applications and innovations throughout society.</p></section></article>";
+const home=`<article><img src='${defaultImg}'><section><h1>Current:</h1><p>I am currently studying for a B.S. in Management Science in my 4th year at UC San Diego with a minor in Computer Science. I am also a team capitain for the UCSD Men's Golf team.</p><p>I work as the HR Coordinator for Best Day Foundation in San Diego which works with special needs children providing them with great outdoors experiences.</p><p>In the future I hope to work with the technology and renewable energy sectors since I am passionate about their growth, development, and possible applications and innovations throughout society.</p></section></article>`;
 const about="<article><h1>About Me</h1><section><p>I am currently a student at UC San Diego in my fourth year. I am a passionate golfer and I am proud to be on the UCSD Men's Golf Team. I chose UC San Diego because of it's renowned academic caliber in the fields that interest me most - economics and computer science. The perfect weather and location, challenging intellectual environment, and demanding collegiate golf are all factors that have contributed to my progress and success as a student-athlete and person. I would like to work with businesses, investments, and technologies that deal with social and environmental causes around the world. It is a goal of mine to eventually utilize the languages I know throughout my career. <p>I enjoy cooking and all kinds of outdoor activities in my free time. As a California resident, I started to surf two years ago. I also enjoy tennis, basketball, volleyball, table tennis, hiking, or just being at the beach. I am also a passionate traveller and I hope to make it to three new places every year. South America and Africa are the next two continents I have set my sights on. San Diego, CA - is the 6th city in the 6th different country that I have lived in.</p></section></article>"
