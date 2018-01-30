@@ -68,14 +68,8 @@ h1{font-size: 1.4rem;font-weight:400;}
 .coursework h3{margin:0;}
 #work aside, #volunteering aside, #activities aside{display:inline-block;font-weight:200; margin-left:1rem;}
 #awards a{line-height:1.8;font-weight:250; text-decoration: none;}
-img{
-    max-width: 8rem;
-    max-height: 10rem;
-    width:auto;
-    height:auto;
-    float:left;
-    padding:0 1.5rem 1.5rem 0;
-}
+#tools, #techskills{display:inline-block;vertical-align:top; margin-right:1rem;}
+img{max-width:8rem;max-height:10rem;width:auto;height:auto;float:left;padding:0 1.5rem 1.5rem 0;}
 
 header ul{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;

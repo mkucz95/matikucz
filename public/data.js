@@ -328,8 +328,8 @@ function addExperience(x,selector){
 }
 function populateExperience(){
     skills.forEach(x=>{addSkill(x, "#skills")});
-    techskills.forEach(x=>{addSkill(x, "#techskills")});
-    tools.forEach(x=>{addSkill(x, "#tools")});
+    techskills.forEach(x=>{addSkill(x, "#techskills ul")});
+    tools.forEach(x=>{addSkill(x, "#tools ul")});
     awards.forEach(x=>{addAward(x, "#awards");});
     experience.forEach(x=>{addExperience(x,"#work");});
     activities.forEach(x=>{addExperience(x,"#activities");});
@@ -353,7 +353,7 @@ function changeEvent(event){
         populateCourses();
     }
     else if(event==="experience"){
-        document.querySelector('main>div').innerHTML="<h1>Skills</h1><ul id='skills'></ul><h2>Tools</h2><ul id='tools'></ul><h2>Technologies</h2><ul id='techskills'></ul><article id='work'><h1>Experience</h1></article><article id='activities'><h1>Activities</h1></article><article id='volunteering'><h2>Volunteering</h2></article><article id='awards'><h2>Honours & Awards</h2></article>";
+        document.querySelector('main>div').innerHTML="<article><section id='skills'><h1>Skills</h1><ul></ul></section><section id='tools'><h2>Tools</h2><ul></ul></section><section id='techskills'><h2>Technologies</h2><ul></ul></section></article><article id='work'><h1>Experience</h1></article><article id='activities'><h1>Activities</h1></article><article id='volunteering'><h2>Volunteering</h2></article><article id='awards'><h2>Honours & Awards</h2></article>";
         populateExperience();
     }
     else if(event==="about"){
