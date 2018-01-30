@@ -54,6 +54,9 @@ h1, h2, h3, h4{
     line-height: 2;
     color:black;
 }
+
+h2{border-bottom:0.2rem solid rgb(85, 171, 247);}
+h1{border-bottom:0.2rem solid rgb(58, 43, 190);}
 .coursework{
     width:40%;
     display:inline-block;
@@ -64,12 +67,12 @@ h1, h2, h3, h4{
     border: 4px solid rgb(230, 230, 238);
     border-radius: 6px;
 }
-.coursework h3, .coursework h2{
-    margin:0;
-}
 h3{font-size:0.7rem;font-weight:200; line-height: 1.5;}
 h2{font-size: 1.3rem;font-weight:300;}
 h1{font-size: 1.4rem;font-weight:400;}
+.coursework h2{margin:0 0 1rem 0;line-height: 1.5;}
+.coursework h3{margin:0;}
+
 
 img{
     max-width: 8rem;
