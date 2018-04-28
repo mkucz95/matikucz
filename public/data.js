@@ -30,6 +30,11 @@ var econ = [
         description:"Financial market functions, institutions and instruments: stocks, bonds, cash instruments, derivatives (options), etc. Discussion of no-arbitrage arguments, as well as investors’ portfolio decisions and the basic risk-return trade-off established in market equilibrium."
       },
       { 
+        type:"Corporate Finance",
+        code:"ECON 173B",
+        description:"Introduces the firm’s capital budgeting decision, including methods for evaluation and ranking of investment projects, the firm’s choice of capital structure, dividend policy decisions, corporate taxes, mergers and acquisitions."
+      },
+      { 
         type:"Operations Research",
         code:"ECON 172A, 172B",
         description:"Linear and integer programming, elements of zero-sum, two-person game theory, and specific combinatorial algorithms."
@@ -38,18 +43,28 @@ var econ = [
         type:"Economic and Business Forecasting",
         code:"ECON 178",
         description:"Survey of theoretical and practical aspects of statistical and economic forecasting. Such topics as long-run and short-run horizons, leading indicator analysis, econometric models, technological and population forecasts, forecast evaluation, and the use of forecasts for public policy."
+      },
+      { 
+        type:"Financial Risk Management",
+        code:"ECON 174",
+        description:"Risk measures, hedging techniques, value of risk to firms, estimation of optimal hedge ratio, risk management with options and futures. Econ 171 is recommended."
+      },
+      { 
+        type:"Economic History; Commodity Chains",
+        code:"HILA 144",
+        description:"Latin American commodity chains from silver to cocaine analysed by commodity linkages and factors of production."
       }
 ];
 
 const defaultImg='headshot.jpg';
 var cse=[
     {
-        type:"Introduction to Programming (C)",
+        type:"Programming in C",
         code:"CSE 5A",
         description:"Introduction to algorithms and top-down problem solving. Introduction to the C language, including functions, arrays, and standard libraries. Basic skills for using a PC graphical user interface operating system environment. File maintenance utilities are covered."
     },
      {
-        type:"Intoduction to OOP - Java",
+        type:"Java Programming - OOP",
         code:"CSE 11",
         description:"An accelerated introduction to computer science and programming using the Java language. Basic UNIX. Modularity and abstraction. Documentation, testing and verification techniques. Basic object-oriented programming, including inheritance and dynamic binding. Exception handling. Event-driven programming. Experience with AWT library or other similar library. "
     },
@@ -74,7 +89,7 @@ var cse=[
         description:"Introduction to software development and engineering methods, including specification, design, implementation, testing, and process. An emphasis on team development, agile methods, and use of tools such as IDE's, version control, and test harnesses."
     },
     {
-        type:"Introduction to Human-Computer Interaction Design",
+        type:"Human-Computer Interaction Design",
         code:"CSE 170",
         description:"Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: Work with a team on a quarter-long design project."
     },
@@ -296,7 +311,7 @@ var volunteering=[{
 function createEl(x, selector){
     console.log(x+": "+selector);
     let el = document.createElement("section");
-    el.innerHTML=`<h3 onclick=changeView(this)>${x.type}: ${x.code}</h3><p>${x.description}</p>`;
+    el.innerHTML=`<h3 onclick=changeView(this)>${x.type}</h3><p><em>${x.code}</em><br>${x.description}</p>`;
     document.getElementById(selector).appendChild(el);
 }
 function changeView(element){
@@ -363,4 +378,5 @@ const econCourses ="<article class='coursework' id='econCourses'><h2>Economics C
 const cseCourses = "<article class='coursework' id='cseCourses'><h2>Computer Science Coursework</h2></article>";
 const mathCourses = "<article class='coursework' id='mathCourses'><h2>Mathematics Coursework</h2></article>";
 const chinCourses = "<article class='coursework' id='chinCourses'><h2>Chinese Language Coursework</h2></article>";
-const home=`<article><img src='${defaultImg}'><section><h1>Current:</h1><p>I am currently studying for a B.S. in Management Science in my 4th year at UC San Diego with a minor in Computer Science. I am also a team capitain for the UCSD Men's Golf team.</p><p>I work as the HR Coordinator for Best Day Foundation in San Diego which works with special needs children providing them with great outdoors experiences.</p><p>In the future I hope to work with the technology and renewable energy sectors since I am passionate about their growth, development, and possible applications and innovations throughout society.</p></section><section><h1>About Me</h1><p>I am currently a student at UC San Diego in my fourth year. I am a passionate golfer and I am proud to be on the UCSD Men's Golf Team. I chose UC San Diego because of it's renowned academic caliber in the fields that interest me most - economics and computer science. The perfect weather and location, challenging intellectual environment, and demanding collegiate golf are all factors that have contributed to my progress and success as a student-athlete and person. I would like to work with businesses, investments, and technologies that deal with social and environmental causes around the world. It is a goal of mine to eventually utilize the languages I know throughout my career. <p>I enjoy cooking and all kinds of outdoor activities in my free time. As a California resident, I started to surf two years ago. I also enjoy tennis, basketball, volleyball, table tennis, hiking, or just being at the beach. I am also a passionate traveller and I hope to make it to three new places every year. South America and Africa are the next two continents I have set my sights on. San Diego, CA - is the 6th city in the 6th different country that I have lived in.</p></section></article>`;
+const home=`<article><img src='${defaultImg}'><section><h1>Current:</h1><p>I am currently studying for a B.S. in Management Science in my 4th year at UC San Diego with a minor in Computer Science. I am also a team capitain for the UCSD Men's Golf team.</p><p>I work as the HR Coordinator for Best Day Foundation in San Diego which works with special needs children providing them with great outdoors experiences.</p><p>In the future I hope to work with the technology and renewable energy sectors since I am passionate about their growth, development, and possible applications and innovations throughout society.</p></section><section><h1>About Me</h1><p>I am currently a student at UC San Diego in my fourth year. I am a passionate golfer and I am proud to be on the UCSD Men's Golf Team. I chose UC San Diego because of it's renowned academic caliber in the fields that interest me most - economics and computer science. The perfect weather and location, challenging intellectual environment, and demanding collegiate golf are all factors that have contributed to my progress and success as a student-athlete and person. I would like to work with businesses, investments, and technologies that deal with social and environmental causes around the world. It is a goal of mine to eventually utilize the languages I know throughout my career. <p>I enjoy cooking and all kinds of outdoor activities in my free time. As a California resident, I started to surf two years ago. I also enjoy tennis, basketball, volleyball, table tennis, hiking, or just being at the beach. I am also a passionate traveller and I hope to make it to three new places every year. South America and Africa are the next two continents I have set my sights on. San Diego, CA - is the 6th city in the 6th different country that I have lived in.
+<li><a href="http://www.ucsdtritons.com/SportSelect.dbml?DB_OEM_ID=5800&SPID=2343&SPSID=29950">UCSD Golf</a></li><li><a href="http://economics.ucsd.edu/undergraduate-program/major-minor-requirements/mgmt-sci.html">Management B.S.</a></li><li><a href="https://cse.ucsd.edu/undergraduate/degree-programs/minor-computer-science">Computer Science Minor</a></li><li><a href="http://www.github.com/mkucz95">My GitHub</a></li><li><a href="https://bestdayfoundation.org/">Best Day Foundation</a></li></p></section></article>`;
