@@ -59,7 +59,7 @@ h1{border-bottom:0.2rem solid rgb(58, 43, 190);}
     padding: 1rem;
     vertical-align:top;
     background-color:rgba(230, 230, 238, 0.886);
-    border: 0.4rem solid rgba(55, 55, 85, 0.934);
+    border-top: 0.4rem solid rgba(55, 55, 85, 0.934);
 }
 h3{font-size:0.9rem;font-weight:200; line-height: 1.5;}
 h2{font-size: 1.3rem;font-weight:300;}
