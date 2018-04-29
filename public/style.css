@@ -12,7 +12,7 @@ a, a:visited, a:hover, a:active{color:inherit;}
 nav{border-top:0.8rem solid darkblue;margin-top:0;background-color: #FFF;}
 footer{border-top:0.3rem solid darkblue;margin-top:0;background-color: #FFF;padding:0.5rem;}
 nav>ul{display:inline; vertical-align:top; margin-left:1rem;}
-nav>ul>li, footer>a, footer>aside{display:inline;padding:0.4rem 1rem;}
+nav>ul>li, footer>a, footer>aside{display:inline-flex;padding:0.4rem 1rem;}
 nav>ul>li:hover, nav>ul>li:active{border-bottom:solid 0.1rem darkblue; box-shadow:inset 0em -0.1rem gold}
 nav>ul>li:hover{cursor:pointer;}
 h3~p{
