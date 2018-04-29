@@ -139,7 +139,7 @@ var chinese=[
 var activities=[
     {
         what:"UCSD Men's Golf",
-        time:"2014-Present",
+        time:"2014-2018: 4 Letters",
         tasks:["Dedicated team leader and team captain working with coaches and teammates",
         "Resulted in a motivating, successful environment and improved team culture"],
         link:"http://www.ucsdtritons.com/ViewArticle.dbml?DB_OEM_ID=5800&ATCLID=209714542"
@@ -366,7 +366,7 @@ function changeEvent(event){
         populateCourses();
     }
     else if(event==="experience"){
-        document.querySelector('main>div').innerHTML="<article><section id='skills'><h1>Skills</h1><ul></ul></section><section id='tools'><h2>Tools</h2><ul></ul></section><section id='techskills'><h2>Technologies</h2><ul></ul></section></article><article id='work'><h1>Experience</h1></article><article id='activities'><h1>Activities</h1></article><article id='volunteering'><h2>Volunteering</h2></article><article id='awards'><h2>Honours & Awards</h2></article>";
+        document.querySelector('main>div').innerHTML="<article><h1>Skills</h1><section id='skills'><ul></ul></section><section id='tools'><h2>Tools</h2><ul></ul></section><section id='techskills'><h2>Technologies</h2><ul></ul></section></article><article id='work'><h1>Experience</h1></article><article id='activities'><h1>Activities</h1></article><article id='volunteering'><h2>Volunteering</h2></article><article id='awards'><h2>Honours & Awards</h2></article>";
         populateExperience();
     }
     else if(event==="home"){document.querySelector('main>div').innerHTML=home;}
