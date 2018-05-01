@@ -10,10 +10,11 @@ main{margin: 0 1rem}
 p{line-height: 1.5;font-weight:300;}
 a, a:visited, a:hover, a:active{color:inherit;}
 nav{border-top:0.8rem solid darkblue;margin-top:0;background-color: #FFF;}
+footer{border-top:0.3rem solid darkblue;margin-top:0;background-color: #FFF;padding:0.5rem;}
 nav>ul{display:inline; vertical-align:top; margin-left:1rem;}
-nav>ul>li, #contact>a{display:inline;padding:0.4rem 1rem;}
-nav>ul>li:hover{border-bottom:solid 0.1rem darkblue;cursor:pointer;}
-nav>ul>li:active{border-bottom:solid 0.1rem gold};
+nav>ul>li, footer>a, footer>aside{display:inline;padding:0.4rem 1rem;}
+nav>ul>li:hover, nav>ul>li:active{border-bottom:solid 0.1rem darkblue; box-shadow:inset 0em -0.1rem gold}
+nav>ul>li:hover{cursor:pointer;}
 h3~p{
     display:none;
     font-size:0.8rem;
@@ -28,7 +29,8 @@ h3~p{
 }
 #education dt, #references dt{font-weight:400;line-height:2;}
 #education dd, #references dd{font-weight:200;}
-#references>tr{display:block;background-color:#FFF;border-top: 0.4rem solid darkblue;margin:1rem;padding:0.5rem;}
+#references dt{border-bottom:0.2rem solid rgb(85, 171, 247); margin-bottom:0.5rem;}
+#references>tr{display:block;background-color:#FFF;border-top: 0.4rem solid rgba(55, 55, 85, 0.934);margin:1rem;padding:0.5rem;}
 header{
     padding:0.5rem 2rem;
     border-top:solid .8rem gold;
@@ -40,9 +42,9 @@ header{
 }
 h1, h2, h3, h4{line-height: 2;color:black;}
 h2{border-bottom:0.2rem solid rgb(85, 171, 247);}
-h1{border-bottom:0.2rem solid darkblue;}
+h1{border-bottom:0.2rem solid rgb(58, 43, 190);}
 .coursework{
-    width:40%;
+    width:90%;
     display:inline-block;
     margin:1rem;
     padding: 1rem;
@@ -60,15 +62,19 @@ h1{font-size: 1.4rem;font-weight:400;}
 #work aside, #volunteering aside, #activities aside{display:inline-block;font-weight:200; margin-left:1rem;}
 #awards a{line-height:1.8;font-weight:300;text-decoration: none;}
 #tools, #techskills{display:inline-block;vertical-align:top;margin-right:1rem;}
-img{max-width:15rem;max-height:15rem;border-radius: 50%;margin-top:5rem;}
-img, section>ul{display:block;margin-left:auto;margin-right:auto;}
+img{max-width:8rem;max-height:10rem;width:auto;height:auto;float:left;margin:0 1.5rem 1.5rem 0;box-shadow: 0.3rem 0.3rem 1rem rgba(114, 112, 112, 0.413);}
 header ul{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-size:0.6rem;margin:0;padding:0;}
 header>ul>li{padding:0 0.8rem;}
 #work section, #volunteering section, #activities section,#awards section{margin-left:1rem;}
+footer{
+    background-color: #FFF;
+    font-size:0.6rem;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top:-1rem;
+}
 #skills>li{margin:.8rem; list-style-type:none; border-left:0.2rem solid rgb(85, 171, 247); padding-left:1rem;}
 #education>dl{background-color: #FFF; padding:1rem;}
 #education dd{border-left:0.2rem solid rgb(85, 171, 247); padding-left:1rem;margin:0.5rem;}
-#home>li{list-style-type:none; display:inline-block;margin:2rem;}
-#home{text-align:center;}
-main{margin:0 10rem;}
-article{margin:0 15rem;}
