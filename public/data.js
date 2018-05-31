@@ -240,9 +240,16 @@ var volunteering=[{
 
         {
         name:"Matthew Mielke",
-        position:"Senior Account Manager - Wilsher Quinn Captial",
+        position:"Director of Business Development - Wilsher Quinn Captial",
         email:"mmielke@wilshirequinn.com",
         phone:"619-872-6000"
+        },
+         
+         {
+        name:"Christine Hunefeldt",
+        position:"Associate Professor of History - UC San Diego",
+        email:"chunefeldt@ucsd.edu",
+        phone:"8585312791"
         }
     ];
 
