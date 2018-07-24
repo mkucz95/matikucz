@@ -53,7 +53,7 @@ h1{border-bottom:0.2rem solid darkblue;}
 h3{font-size:0.9rem;font-weight:200; line-height: 1.5;}
 h2, #references dt{font-size: 1.3rem;font-weight:300;}
 h1{font-size: 1.4rem;font-weight:400;}
-#work h3, #activities h3, #volunteering h3{font-size:1.1rem;font-weight:300; line-height: 1.2; display:inline-block;margin:0.5rem 0 0 0;}
+#work h3, #activities h3, #volunteering h3{font-size:1.1rem;font-weight:400; line-height: 1.2; display:inline-block;margin:0.5rem 0 0 0;}
 .coursework h2{margin:0 0 1rem 0;line-height: 1.5;}
 .coursework h3{margin:0;}
 .coursework h3:hover{cursor:pointer;}
@@ -62,12 +62,13 @@ h1{font-size: 1.4rem;font-weight:400;}
 #tools, #techskills{display:inline-block;vertical-align:top;margin-right:1rem;}
 img{max-width:15rem;max-height:15rem;border-radius: 50%;margin-top:5rem;}
 img, section>ul{display:block;margin-left:auto;margin-right:auto;}
+section>ul{margin-top:0;}
 header ul{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;font-size:0.6rem;margin:0;padding:0;}
 header>ul>li{padding:0 0.8rem;}
-#work section, #volunteering section, #activities section,#awards section{margin-left:1rem;}
-#skills>li{margin:.8rem; list-style-type:none; border-left:0.2rem solid rgb(85, 171, 247); padding-left:1rem;}
+#work section, #volunteering section, #activities section,#awards section{margin-left:1rem;line-height: 1.5; font-weight: 300;}
+#skills>li{margin:.8rem; list-style-type:none;line-height: 1.5;font-weight: 300;}
 #education>dl{background-color: #FFF; padding:1rem;}
-#education dd{border-left:0.2rem solid rgb(85, 171, 247); padding-left:1rem;margin:0.5rem;}
+#education dd{border-left:0.01rem solid rgb(85, 171, 247); padding-left:1rem;margin:0.5rem;}
 #home>li{list-style-type:none; display:inline-block;margin:2rem;}
 #home{text-align:center;}
 main{margin:0 10rem;}

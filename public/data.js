@@ -201,6 +201,7 @@ var volunteering=[{
   
    var skills=[
         {name:"Fluent in English, Polish and German, presently learning Mandarin"},
+        {name:"Adept at Deep Learning and Supervised Machine Learning in Python "},
         {name:"Proficient with Microsoft Office, Spreadsheet Processing, Salesforce"},
         {name:"Knowledgeable in Business & Management; property valuation, private money lending, risk-return analysis, risk minimization strategies, trust-deed investing, and customer relations"},
         {name:"Proficient in product design process and software development"},
@@ -210,6 +211,7 @@ var volunteering=[{
     ];
 
     var techskills=[
+        {name:"Python"},
         {name:"Java"}, 
         {name:"HTML"},
         {name:"CSS"},
@@ -227,6 +229,9 @@ var volunteering=[{
         {name:"J-Unit - testing"}, 
         {name:"Android ADT - app development"}, 
         {name:"JIRA - project management"}, 
+        {name:"SciKit-Learn - machine learning in python"}, 
+        {name:"KERAS - Deep Learning Tool"}, 
+        {name:"PyTorch - Deep Learning Tool"}, 
         {name:"GIT - software version control"}
     ];
 
@@ -235,7 +240,14 @@ var volunteering=[{
         name:"Jim Ragan",
         position:"UCSD Men's Golf Head Coach",
         email:"jragan@ucsd.edu",
-        phone:"858-699 2965"
+        phone:"858-699-2965"
+        },
+
+        {
+        name:"Christine Hunefeldt",
+        position:"Associate Professor of History - UCSD",
+        email:"chunefeldt@ucsd.edu",
+        phone:"858-531-2791"
         },
 
         {
@@ -264,12 +276,12 @@ var volunteering=[{
     },
     {
         title:"UCSD Athletic Director's Honor Roll",
-        year:"2015, 2016, 2017",
+        year:"2015, 2016, 2017, 2018",
         link:""
     },
     {
         title:"UCSD Warren College Provost Honor Roll",
-        year:"Six Times",
+        year:"Eleven Times",
         link:""
     },
     {
@@ -311,13 +323,14 @@ var volunteering=[{
 function createEl(x, selector){
     console.log(x+": "+selector);
     let el = document.createElement("section");
-    el.innerHTML=`<h3 onclick=changeView(this)>${x.type}</h3><p style="display:none"><em>${x.code}</em><br>${x.description}</p>`;
+    //el.innerHTML=`<h3 onclick=changeView(this)>${x.type}</h3><p style="display:none"><em>${x.code}</em><br>${x.description}</p>`;
+    el.innerHTML=`<h3 onclick=changeView(this)>${x.type}</h3><p style="display:none;font-size:0.7rem;">${x.code}</p>`;
     document.getElementById(selector).appendChild(el);
 }
 function changeView(element){
     let p=element.nextElementSibling;
-    if(p.style.display=='block')p.style.display='none';
-    else p.style.display='block';
+    if(p.style.display=='inline')p.style.display='none';
+    else p.style.display='inline';
 }
 function addSkill(x, selector){
     let el=document.createElement("li");
@@ -336,7 +349,7 @@ function addAward(x, selector){
 }
 function addExperience(x,selector){
     let el=document.createElement("section");
-    el.innerHTML = `<h3>${x.what}</h3><aside>${x.time}</aside><p>`;
+    el.innerHTML = `<h3>${x.what}</h3><aside>${x.time}</aside>`;
     let list = document.createElement("ul");
     x.tasks.forEach(y=>{let listEl = document.createElement("li");listEl.innerHTML=y;list.appendChild(listEl);});
     el.appendChild(list);
@@ -376,21 +389,31 @@ function changeEvent(event){
         document.querySelector('main>div').innerHTML=home;
     }
 }
-const education = "<div id='education'><h1>Education</h1><dl><dt><strong>University of California, San Diego (UCSD) </strong> - Expected June 2018 </dt><dd> B.S. in Management Science</dd><dd> Minor in Computer Science</dd><dd>Overall GPA: 3.72/4.00 - Major GPA: 3.84, Minor GPA: 3.71</dd><dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd></dl></div>";
+const education = "<div id='education'><h1>Education</h1> \
+<dl><dt><strong>University of California, San Diego (UCSD) </strong> June 2018 cum Laude</dt><dd> B.S. in Management Science with Distinction </dd><dd> Minor in Computer Science</dd><dd>Overall GPA: 3.72/4.00 - Major GPA: 3.84, Minor GPA: 3.71</dd>\
+<dt>Udacity NanoDegree</dt><dd>Machine Learning for Data Science</dd>\
+<dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd></dl></div>";
+
 const econCourses ="<article class='coursework' id='econCourses'><h2>Economics Coursework</h2></article>";
 const cseCourses = "<article class='coursework' id='cseCourses'><h2>Computer Science Coursework</h2></article>";
 const mathCourses = "<article class='coursework' id='mathCourses'><h2>Mathematics Coursework</h2></article>";
 const chinCourses = "<article class='coursework' id='chinCourses'><h2>Chinese Language Coursework</h2></article>";
-const about=`<article><section><h1>Current</h1><p>I am currently studying for a B.S. in Management Science in my 4th year at UC San Diego with a minor in Computer Science. I am also a team capitain for the UCSD Men's Golf team.</p><p>I work as the HR Coordinator for Best Day Foundation in San Diego which works with special needs children providing them with great outdoors experiences.</p><p>In the future I hope to work with the technology and renewable energy sectors since I am passionate about their growth, development, and possible applications and innovations throughout society.</p></section><section><h1>About Me</h1><p>I am currently a student at UC San Diego in my fourth year. I am a passionate golfer and I am proud to be on the UCSD Men's Golf Team. I chose UC San Diego because of it's renowned academic caliber in the fields that interest me most - economics and computer science. The perfect weather and location, challenging intellectual environment, and demanding collegiate golf are all factors that have contributed to my progress and success as a student-athlete and person. I would like to work with businesses, investments, and technologies that deal with social and environmental causes around the world. It is a goal of mine to eventually utilize the languages I know throughout my career. <p>I enjoy cooking and all kinds of outdoor activities in my free time. As a California resident, I started to surf two years ago. I also enjoy tennis, basketball, volleyball, table tennis, hiking, or just being at the beach. I am also a passionate traveller and I hope to make it to three new places every year. South America and Africa are the next two continents I have set my sights on. San Diego, CA - is the 6th city in the 6th different country that I have lived in.</p></section>
+const about=`<article><section><h1>Current</h1><p>I am a graduate from UC San Diego with a B.S. in Management Science and a minor in Computer Science. My education has stoked a pasion for the application of data real world scenarios. I am learning about the applications of this data through the Udacity Machine Learning for Data Science course.</p>
+<p>I work as the HR Coordinator for Best Day Foundation in San Diego which works with special needs children providing them with great outdoors experiences.</p></section>
+<section><h1>About Me</h1><p>I am a passionate golfer, and I was a team capitain and four-year letter winner with the UCSD Men's Golf team. I chose UC San Diego because of it's renowned academic caliber in the fields that interest me most - economics and computer science. The perfect weather and location, challenging intellectual environment, and demanding collegiate golf are all factors that have contributed to my progress and success as a student-athlete and person.</p>
+<p>I would like to work with businesses, investments, and technologies that deal with social and environmental causes around the world. It is a goal of mine to eventually utilize the languages I know throughout my career.</p>
+<p>I enjoy cooking and all kinds of outdoor activities in my free time. As a California resident, I started to surf two years ago. I also enjoy tennis, basketball, volleyball, table tennis, hiking, or just being at the beach. I am also a passionate traveller and I hope to make it to three new places every year. South America and Africa are the next two continents I have set my sights on. San Diego, CA - is the 6th city in the 6th different country that I have lived in.</p></section>
 <section id="contact"> <h1>Contact</h1><a href="tel:1-858-260-4579">(858)-260 4579</a>
 <a href="mailto:mati.kucz95@gmail.com?subject=Reaching Out From Your Website" target="_blank">mati.kucz95@gmail.com</a>
 </section></article>`;
 
+
 const home=`<img src="headshot.jpg" class="home">
-  <ul class="center" id="home">
-    <li><a href="http://www.ucsdtritons.com/SportSelect.dbml?DB_OEM_ID=5800&SPID=2343&SPSID=29950">UCSD Golf</a></li>
-    <li><a href="http://economics.ucsd.edu/undergraduate-program/major-minor-requirements/mgmt-sci.html">Management B.S.</a></li>
-    <li><a href="https://cse.ucsd.edu/undergraduate/degree-programs/minor-computer-science">Computer Science Minor</a></li>
-    <li><a href="http://www.github.com/mkucz95">My GitHub</a></li>
-    <li><a href="https://bestdayfoundation.org/">Best Day Foundation</a></li>
-  </ul>`;
+    <ul class="center" id="home">
+        <li><a href="http://economics.ucsd.edu/undergraduate-program/major-minor-requirements/mgmt-sci.html">Management B.S.</a></li>
+        <li><a href="https://cse.ucsd.edu/undergraduate/degree-programs/minor-computer-science">Computer Science Minor</a></li>
+        <li><a href="http://www.github.com/mkucz95">My GitHub</a></li>
+        <li><a href="https://bestdayfoundation.org/">Best Day Foundation</a></li>
+        <li><a href="http://www.linkedin.com/in/m-kucz">LinkedIn</a></li>
+        <li><a href="http://www.ucsdtritons.com/SportSelect.dbml?DB_OEM_ID=5800&SPID=2343&SPSID=29950">UCSD Golf</a></li>
+    </ul>`;
