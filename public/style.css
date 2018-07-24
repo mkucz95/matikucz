@@ -5,6 +5,7 @@ body{
     background-color:#F2F2F2;
     margin:0 0 2rem 0;
     position:relative;
+    min-width: 1200px;
 }
 main{margin: 0 1rem}
 p{line-height: 1.5;font-weight:300;}
