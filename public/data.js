@@ -55,7 +55,24 @@ var econ = [
         description:"Latin American commodity chains from silver to cocaine analysed by commodity linkages and factors of production."
       }
 ];
-
+var projects =[
+    {name:"Progressive Web App - PWA",
+    description:"A real-time CRUD app for soccer statistics for a club team audience",
+    link: "footy-b0652.firebaseapp.com/login.html"},
+    {name:"Charity Donors Classifying",
+    description:"A supervised machine learning project which takes data from the california census and predicts, based on income date, which people are most likly to donate",
+    link: "https://github.com/mkucz95/finding_donors/"},
+    {name:"Image Classifier",
+    description:"A deep learning project utilizing a convolutional neural network (CNN) to classify images of flowers into one of 102 categories",
+    link: "https://github.com/mkucz95/image_classifier"},
+    {name:"Commodity Chain Research: Agave Distilled Spirits",
+    description:"A in-depth look into the past and present of two popular spirits: Tequila and Mezcal. What has driven the development of these two commodities, and why are they now so different?",
+    link: "https://docs.google.com/document/d/1pyvrssVA4bIrAyKUEE7RaUK3bbVwiJ7CDEuh6h_YeTI/edit?usp=sharing"},
+    {name:"UX and UI Focused Web-App: Favor4Favour",
+    description:"Coordinated, planned, and exectued the design process, front and back end implementations of the web app",
+    link:"https://favor4favour.herokuapp.com/"
+    }
+]
 const defaultImg='headshot.jpg';
 var cse=[
     {
@@ -143,6 +160,13 @@ var activities=[
         tasks:["Dedicated team leader and team captain working with coaches and teammates",
         "Resulted in a motivating, successful environment and improved team culture"],
         link:"http://www.ucsdtritons.com/ViewArticle.dbml?DB_OEM_ID=5800&ATCLID=209714542"
+    },
+    {
+        what:"Prague Model United Nations (MUN) - Chair",
+        time:"April 2011",
+        tasks:["Organizer and co-chair for a 150 person conference.",
+        "Conference lasted three days and required strong communication and leadership skills"],
+        link:""
     }
 ];
 
@@ -165,38 +189,24 @@ var volunteering=[{
       {
         what:"HR Organizer at Best Day Foundation",
         time:"June 2017 - Present",
-        tasks:["Develop and expand the volunteer network for the Southern California Chapter of the Best Day Foundation",
-        "Plan and communicate with the Best Day team to maximize the efficiency and success of each event"],
+        tasks:["Developed and expanded the volunteer network for the Southern California Chapter of the Best Day Foundation",
+        "Planned and communicated with the Best Day team to maximize the efficiency and success of each event"],
         link:"https://bestdayfoundation.org/locations/san-diego-county-ca/"
     },
     {
         what:"Triton Athletics Council Representative",
         time:"2016-Present",
-        tasks:["Communicates and coordinates between council representative",
+        tasks:["Communicated and coordinated between council representatives and wider athletics community",
         "Resulted in successful engagement and improvement in UCSD Athletic's community outreach and networking"],
         link:"http://www.ucsdtritons.com/ViewArticle.dbml?ATCLID=187355"
     },
     {
-        what:"Intern at Wilshire Quinn Capital - San Diego",
+        what:"Business Development Intern at Wilshire Quinn Capital - San Diego",
         time:"Summer 2016",
         tasks:["Involved with daily operation of the income fund",
         "Trust deed investing, private money lending, property management, investing, risk minimization strategies, investor relations and communications"],
         link:"http://www.wilshirequinn.com/"
     },
-    {
-        what:"Designer and Web-App Developer",
-        time:"2017",
-        tasks:["Coordinated, planned, and exectued the design process, front and back end implementations of the web app",
-        "Successful and appealing product that met and exceeded all requirements"],
-        link:"https://favor4favour.herokuapp.com/"
-    },
-    {
-        what:"Prague Model United Nations (MUN) - Chair",
-        time:"April 2011",
-        tasks:["Organizer and co-chair for a 150 person conference.",
-        "Conference lasted three days and required strong communication and leadership skills"],
-        link:""
-    }
 ];
   
    var skills=[
@@ -255,13 +265,6 @@ var volunteering=[{
         position:"Director of Business Development - Wilsher Quinn Captial",
         email:"mmielke@wilshirequinn.com",
         phone:"619-872-6000"
-        },
-         
-         {
-        name:"Christine Hunefeldt",
-        position:"Associate Professor of History - UC San Diego",
-        email:"chunefeldt@ucsd.edu",
-        phone:"8585312791"
         }
     ];
 
@@ -380,6 +383,14 @@ function populateCourses(){
     math.forEach(x=>{let el = createEl(x, "mathCourses");});
     chinese.forEach(x=>{let el = createEl(x, "chinCourses");});
 }
+function populateProjects(){
+    projects.forEach(x=>{
+        let el = document.createElement("section");
+        el.innerHTML=`<h3><a href=${x.link}>${x.name}</a></h3><p>${x.description}</p>`;
+        document.querySelector('.project').appendChild(el);
+    });
+}
+
 function changeEvent(event){
     if(event==="coursework"){
         document.querySelector('main>div').innerHTML = education+econCourses+cseCourses+mathCourses+chinCourses;
@@ -395,12 +406,15 @@ function changeEvent(event){
     else if(event==="home"){
         document.querySelector('main>div').innerHTML=home;
     }
+    else if(event==="projects"){document.querySelector('main>div').innerHTML=project_html;
+        populateProjects();
+    }
 }
 const education = "<div id='education'><h1>Education</h1> \
 <dl><dt><strong>University of California, San Diego (UCSD) </strong> June 2018 cum Laude</dt><dd> B.S. in Management Science with Distinction </dd><dd> Minor in Computer Science</dd><dd>Overall GPA: 3.72/4.00 - Major GPA: 3.84, Minor GPA: 3.71</dd>\
 <dt>Udacity NanoDegree</dt><dd>Machine Learning for Data Science</dd>\
 <dt>Overseas Family School (OFS) - Singapore</dt><dd>IGSCE</dd><dd> International Baccalaureate (IB) - Bilingual Diploma</dd></dl></div>";
-
+const project_html = "<article class='project'><h2>Projects</h2></article>";
 const econCourses ="<article class='coursework' id='econCourses'><h2>Economics Coursework</h2></article>";
 const cseCourses = "<article class='coursework' id='cseCourses'><h2>Computer Science Coursework</h2></article>";
 const mathCourses = "<article class='coursework' id='mathCourses'><h2>Mathematics Coursework</h2></article>";
