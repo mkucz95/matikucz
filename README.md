@@ -1,4 +1,4 @@
-# Personal Single-Page Website
+# Personal Website (Single-Page)
 ## Installations
 - Used VisualStudio Code
 - Firebase
