@@ -1,4 +1,4 @@
-# Personal Website: Hosted on Firebase
+# Personal Single-Page Website
 ## Installations
 - Used VisualStudio Code
 - Firebase
