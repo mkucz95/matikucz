@@ -1,341 +1,38 @@
-var econ = [
-      { 
-        type:"Econometrics",
-        code:"ECON 120A, 120B, 120C",
-        description:"Probability and statistics used in economics. Probability and sampling theory, statistical inference, and use of spreadsheets. Basic econometric methods, including the linear regression, hypothesis testing, quantifying uncertainty using confidence intervals, and distinguishing correlation from causality. Advanced econometric methods: estimation of linear regression models with endogeneity, economic methods designed for panel data sets, estimation of discrete choice models, time series analysis, and estimation in the presence of autocorrelated and heterskedastic errors."
-      },
-    { 
-        type:"Microeconomics",
-        code:"ECON 1, 100A, 100B, 100C",
-        description:"Economic analysis of household determination of the demand for goods and services, consumption/saving decisions, and the supply of labor. Analysis of firms’ production and costs, the supply of output and demand factors of production. Analysis of perfectly competitive markets. Analysis of the effects of imperfect market structure, strategy, and imperfect information."
-      },
-     { 
-        type:"Macroeconomics",
-        code:"ECON 3, 110A, 110B",
-        description:"Analysis of the determination of long run growth and models of the determination of output, interest rates, and the price level. Analysis of inflation, unemployment, and monetary and fiscal policy. '\n'Analysis of the determination of consumption spending at the aggregate level; extension of the basic macro model to include exchange rates and international trade; the aggregate money supply, and the business cycle."
-           },
-       { 
-        type:"Decisions under Uncertainty",
-        code:"ECON 171",
-        description:"Decision making when the consequences are uncertain. Decision trees, payoff tables, decision criteria, expected utility theory, risk aversion, sample information."
-      },
-       { 
-        type:"Financial Accounting",
-        code:"ECON 4",
-        description:"Recording, organizing, and communicating financial information relating to business entities."
-      },
-      { 
-        type:"Financial Markets",
-        code:"ECON 173A",
-        description:"Financial market functions, institutions and instruments: stocks, bonds, cash instruments, derivatives (options), etc. Discussion of no-arbitrage arguments, as well as investors’ portfolio decisions and the basic risk-return trade-off established in market equilibrium."
-      },
-      { 
-        type:"Corporate Finance",
-        code:"ECON 173B",
-        description:"Introduces the firm’s capital budgeting decision, including methods for evaluation and ranking of investment projects, the firm’s choice of capital structure, dividend policy decisions, corporate taxes, mergers and acquisitions."
-      },
-      { 
-        type:"Operations Research",
-        code:"ECON 172A, 172B",
-        description:"Linear and integer programming, elements of zero-sum, two-person game theory, and specific combinatorial algorithms."
-      },
-      { 
-        type:"Economic and Business Forecasting",
-        code:"ECON 178",
-        description:"Survey of theoretical and practical aspects of statistical and economic forecasting. Such topics as long-run and short-run horizons, leading indicator analysis, econometric models, technological and population forecasts, forecast evaluation, and the use of forecasts for public policy."
-      },
-      { 
-        type:"Financial Risk Management",
-        code:"ECON 174",
-        description:"Risk measures, hedging techniques, value of risk to firms, estimation of optimal hedge ratio, risk management with options and futures. Econ 171 is recommended."
-      },
-      { 
-        type:"Economic History; Commodity Chains",
-        code:"HILA 144",
-        description:"Latin American commodity chains from silver to cocaine analysed by commodity linkages and factors of production."
-      }
-];
-var projects =[
-    {name:"Progressive Web App - PWA",
-    description:"A real-time CRUD app for soccer statistics for a club team audience",
-    link: "footy-b0652.firebaseapp.com/login.html"},
-    {name:"Charity Donors Classifying",
-    description:"A supervised machine learning project which takes data from the california census and predicts, based on income date, which people are most likly to donate",
-    link: "https://github.com/mkucz95/finding_donors/"},
-    {name:"Image Classifier",
-    description:"A deep learning project utilizing a convolutional neural network (CNN) to classify images of flowers into one of 102 categories",
-    link: "https://github.com/mkucz95/image_classifier"},
-    {name:"Commodity Chain Research: Agave Distilled Spirits",
-    description:"A in-depth look into the past and present of two popular spirits: Tequila and Mezcal. What has driven the development of these two commodities, and why are they now so different?",
-    link: "https://docs.google.com/document/d/1pyvrssVA4bIrAyKUEE7RaUK3bbVwiJ7CDEuh6h_YeTI/edit?usp=sharing"},
-    {name:"UX and UI Focused Web-App: Favor4Favour",
-    description:"Coordinated, planned, and exectued the design process, front and back end implementations of the web app",
-    link:"https://favor4favour.herokuapp.com/"
-    }
-]
-const defaultImg='headshot.jpg';
-var cse=[
-    {
-        type:"Programming in C",
-        code:"CSE 5A",
-        description:"Introduction to algorithms and top-down problem solving. Introduction to the C language, including functions, arrays, and standard libraries. Basic skills for using a PC graphical user interface operating system environment. File maintenance utilities are covered."
-    },
-     {
-        type:"Java Programming - OOP",
-        code:"CSE 11",
-        description:"An accelerated introduction to computer science and programming using the Java language. Basic UNIX. Modularity and abstraction. Documentation, testing and verification techniques. Basic object-oriented programming, including inheritance and dynamic binding. Exception handling. Event-driven programming. Experience with AWT library or other similar library. "
-    },
-    {
-        type:"Basic Data Structures and OOD",
-        code:"CSE 12",
-        description:"Use and implementation of basic data structures including linked lists, stacks, and queues. Use of advanced structures such as binary trees and hash tables. Object-oriented design including interfaces, polymorphism, encapsulation, abstract data types, pre-/post-conditions. Recursion. Uses Java and Java Collections."
-    },
-    {
-        type:"Computer Organization and Systems Programming",
-        code:"CSE 30",
-        description:"Introduction to organization of modern digital computers—understanding the various components of a computer and their interrelationships. Study of a specific architecture/machine with emphasis on systems programming in C and Assembly languages in a UNIX environment. "
-    },
-    {
-        type:"Advanced Data Structures",
-        code:"CSE 100",
-        description:"High-performance data structures and supporting algorithms. Use and implementation of data structures like (un)balanced trees, graphs, priority queues, and hash tables. Also memory management, pointers, recursion. Theoretical and practical performance analysis, both average case and amortized. Uses C++ and STL."
-    },
-    {
-        type:"Software Engineering",
-        code:"CSE 110",
-        description:"Introduction to software development and engineering methods, including specification, design, implementation, testing, and process. An emphasis on team development, agile methods, and use of tools such as IDE's, version control, and test harnesses."
-    },
-    {
-        type:"Human-Computer Interaction Design",
-        code:"CSE 170",
-        description:"Introduces fundamental methods and principles for designing, implementing, and evaluating user interfaces. Topics: user-centered design, rapid prototyping, experimentation, direct manipulation, cognitive principles, visual design, social software, software tools. Learn by doing: Work with a team on a quarter-long design project."
-    },
-    {
-        type:"Web Client Languages",
-        code:"CSE 134B",
-        description:"Design and implementation of interactive World Wide Web clients using helper applications and plug-ins. Covers speed optimization and security concerns"
-    },
-];
+// Set the configuration for your app
+var config = {
+    apiKey: "AIzaSyCiGO8rHXu7Q-rzWW0RziG-YWurzbiDy64",
+    authDomain: "matikucz-7a596.firebaseapp.com",
+    databaseURL: "https://matikucz-7a596.firebaseio.com/"
+};
 
-var math = [
-  {
-    type:"Calculus for Science and Engineering",
-    code:"MATH 20A, 20B",
-    description:"Foundations of differential and integral calculus of one variable. Functions, graphs, continuity, limits, derivative, tangent line. Applications with algebraic, exponential, logarithmic, and trigonometric functions. Integral calculus of one variable and its applications, with exponential, logarithmic, hyperbolic, and trigonometric functions. Methods of integration. Infinite series. Polar coordinates in the plane and complex exponentials."
-  },
-   {
-    type:"Calculus and Analytic Geometry for Science and Engineering",
-    code:"MATH 20C",
-    description:"Vector geometry, vector functions and their derivatives. Partial differentiation. Maxima and minima. Double integration."
-  },
-  {
-    type:"Linear Algebra",
-    code:"MATH 20F",
-    description:"Matrix algebra, Gaussian elimination, determinants. Linear and affine subspaces, bases of Euclidean spaces. Eigenvalues and eigenvectors, quadratic forms, orthogonal matrices, diagonalization of symmetric matrices. Applications. Computing symbolic and graphical solutions using Matlab."
-  },
-   {
-    type:"Intro to Discrete Mathematics",
-    code:"MATH 15A",
-    description:"Basic discrete mathematical structure: sets, relations, functions, sequences, equivalence relations, partial orders, and number systems. Methods of reasoning and proofs: propositional logic, predicate logic, induction, recursion, and pigeonhole principle. Infinite sets and diagonalization. Basic counting techniques; permutation and combinations. Applications will be given to digital logic design, elementary number theory, design of programs, and proofs of program correctness."
-   }
-];
+firebase.initializeApp(config);
 
-var chinese=[
-  {
-    type:"First Year Chinese - Non-Native Series",
-    code:"CHIN 10AN, 10BN, 10CN",
-    description:"Introductory course of basic Chinese for students with no background in Chinese. Curriculum for entry-level Chinese in communicative skills. Covers pronunciation, fundamentals of Chinese grammar, and vocabulary. Topics include greetings, family affairs, numbers, and daily exchanges. Also covers pronunciation, more elaborate grammar, and vocabulary. Focus on goal-oriented tasks: school life, shopping, and transportation.Continuation course of basic Chinese for students with no background in Chinese. Expansion on pronunciation and more elaborate Chinese grammar and increasing vocabulary. Topics include dining, direction, and social life."
-  },
-  {
-    type:"Second Year Chinese - Non-Native Series",
-    code:"CHIN 20AN, 20BN, 20CN",
-    description:"Covers sentence structure, idiomatic expression, development of listening, speaking, reading, and written competence in Chinese."
-  }
-];
+// Get a reference to the database service
+var database = firebase.database();
+var data = database.ref('/').once('value');
+var pop = data.personalsite
+var econ = JSON.parse(pop.econ);
+var aboutme = JSON.parse(data.aboutMe);
+var current = JSON.parse(data.current);
+var activities = JSON.parse(pop.activities);
+var awards = JSON.parse(pop.awards);
+var books = JSON.parse(pop.books);
+var chinese = JSON.parse(pop.chinese);
+var cse = JSON.parse(pop.cse);
+var experience = JSON.parse(pop.experience);
+var math = JSON.parse(pop.math);
+var projects = JSON.parse(pop.math);
+var references = JSON.parse(pop.references);
+var skills = JSON.parse(pop.skills);
+var techskills = JSON.parse(pop.techskills);
+var tools = JSON.parse(pop.tools);
+var volunteering = JSON.parse(pop.volunteering);
 
-var activities=[
-    {
-        what:"UCSD Men's Golf",
-        time:"2014-2018: 4 Letters",
-        tasks:["Dedicated team leader and team captain working with coaches and teammates",
-        "Resulted in a motivating, successful environment and improved team culture"],
-        link:"http://www.ucsdtritons.com/ViewArticle.dbml?DB_OEM_ID=5800&ATCLID=209714542"
-    },
-    {
-        what:"Prague Model United Nations (MUN) - Chair",
-        time:"April 2011",
-        tasks:["Organizer and co-chair for a 150 person conference.",
-        "Conference lasted three days and required strong communication and leadership skills"],
-        link:""
-    }
-];
-
-var volunteering=[{
-    what:"Best Day Foundation",
-    time:"June 2016",
-    tasks:["Engaged with and supported children with special needs",
-    "Helped the children surf and have fun at the beach and in the water"],
-    link:"https://bestdayfoundation.org/locations/san-diego-county-ca/"
-},
-{
-    what:"Willing Hearts (NGO) - Singapore",
-    time:"March 2013",
-    tasks:["Helped with daily operations",
-    "Food preparation, food delivery around Singapore"],
-    link:"http://www.willinghearts.org.sg/"
-}];
-
- var experience=[
-      {
-        what:"HR Organizer at Best Day Foundation",
-        time:"June 2017 - Present",
-        tasks:["Developed and expanded the volunteer network for the Southern California Chapter of the Best Day Foundation",
-        "Planned and communicated with the Best Day team to maximize the efficiency and success of each event"],
-        link:"https://bestdayfoundation.org/locations/san-diego-county-ca/"
-    },
-    {
-        what:"Triton Athletics Council Representative",
-        time:"2016-Present",
-        tasks:["Communicated and coordinated between council representatives and wider athletics community",
-        "Resulted in successful engagement and improvement in UCSD Athletic's community outreach and networking"],
-        link:"http://www.ucsdtritons.com/ViewArticle.dbml?ATCLID=187355"
-    },
-    {
-        what:"Business Development Intern at Wilshire Quinn Capital - San Diego",
-        time:"Summer 2016",
-        tasks:["Involved with daily operation of the income fund",
-        "Trust deed investing, private money lending, property management, investing, risk minimization strategies, investor relations and communications"],
-        link:"http://www.wilshirequinn.com/"
-    },
-];
-  
-   var skills=[
-        {name:"Fluent in English, Polish and German, presently learning Mandarin"},
-        {name:"Adept at Deep Learning and Supervised Machine Learning in Python "},
-        {name:"Proficient with Microsoft Office, Spreadsheet Processing, Salesforce"},
-        {name:"Knowledgeable in Business & Management; property valuation, private money lending, risk-return analysis, risk minimization strategies, trust-deed investing, and customer relations"},
-        {name:"Proficient in product design process and software development"},
-        {name:"Passionately hard-working, great listener with a positive attitude"},
-        {name:"Effective communication and public speaking skills"},
-        {name:"Confident and motivating leadership"}
-    ];
-
-    var techskills=[
-        {name:"Python"},
-        {name:"Java"}, 
-        {name:"HTML"},
-        {name:"CSS"},
-        {name:"JavaScript"},
-        {name:"Node.js"},
-        {name:"Android"},
-        {name:"Firebase"},
-        {name:"Google Play Services"},
-        {name:"C"},
-        {name:"ARM (Assembly)"},
-        {name:"Unix Systems"}
-    ];
-
-    var tools=[
-        {name:"J-Unit - testing"}, 
-        {name:"Android ADT - app development"}, 
-        {name:"JIRA - project management"}, 
-        {name:"SciKit-Learn - machine learning in python"}, 
-        {name:"KERAS - Deep Learning Tool"}, 
-        {name:"PyTorch - Deep Learning Tool"}, 
-        {name:"GIT - software version control"}
-    ];
-
-   var references=[
-        {
-        name:"Jim Ragan",
-        position:"UCSD Men's Golf Head Coach",
-        email:"jragan@ucsd.edu",
-        phone:"858-699-2965"
-        },
-
-        {
-        name:"Christine Hunefeldt",
-        position:"Associate Professor of History - UCSD",
-        email:"chunefeldt@ucsd.edu",
-        phone:"858-531-2791"
-        },
-
-        {
-        name:"Matthew Mielke",
-        position:"Director of Business Development - Wilsher Quinn Captial",
-        email:"mmielke@wilshirequinn.com",
-        phone:"619-872-6000"
-        }
-    ];
-
-    var awards=[
-     {
-        title:"Academic All-American",
-        year:"2017",
-        link:"http://www.ucsdtritons.com/ViewArticle.dbml?DB_OEM_ID=5800&ATCLID=211656897"
-    },
-    {
-        title:"CCAA All-Academic Team",
-        year:"2016-2017",
-        link:"https://s3.amazonaws.com/sidearm.sites/goccaa.sidearmsports.com/documents/2017/6/24/2017_Spring_All_Academic.pdf"
-    },
-    {
-        title:"CCAA All-Academic Team",
-        year:"2015-2016",
-        link:"http://www.goccaa.org/documents/2016/6/18//2016_Spring_All_Academic.pdf?id=814"
-    },
-    {
-        title:"UCSD Athletic Director's Honor Roll",
-        year:"2015, 2016, 2017, 2018",
-        link:""
-    },
-    {
-        title:"UCSD Warren College Provost Honor Roll",
-        year:"Eleven Times",
-        link:""
-    },
-    {
-        title:"UCSD Student-Athlete Honoree",
-        year:"2017",
-        link:"http://www.ucsdtritons.com/ViewArticle.dbml?DB_OEM_ID=5800&ATCLID=211547891"
-    },
-     {
-        title:"OFS Academic Merit Certificate",
-        year:"2012, 2013, 2014",
-        link:""
-    },
-    {
-        title:"Principal's Award for Academic Excellence",
-        year:"2012, 2013, 2014",
-        link:""
-    },
-     {
-        title:"International Student Award - OFS",
-        year:"2011, 2012",
-        link:""
-    },
-    {
-        title:"UK Intermediate Maths Challenge- Bronze Certificate",
-        year:"2012",
-        link:""
-    },
-     {
-        title:"Best Delegate Award - Bratislava Model United Nations",
-        year:"2011",
-        link:""
-    },
-      {
-        title:"Mission Award to Recognize Individual Exellence - International School of Prague",
-        year:"2011",
-        link:""
-    }
-];
 function createEl(x, selector){
-    console.log(x+": "+selector);
-    let el = document.createElement("section");
+    let elem=document.createElement("section");
     //el.innerHTML=`<h3 onclick=changeView(this)>${x.type}</h3><p style="display:none"><em>${x.code}</em><br>${x.description}</p>`;
-    el.innerHTML=`<h3 onclick=changeView(this)>${x.type}</h3><p style="display:none;font-size:0.7rem;">${x.code}</p>`;
-    document.getElementById(selector).appendChild(el);
+    elem.innerHTML=`<h3 onclick=changeView(this)>${x.type}</h3><p style="display:none;font-size:0.7rem;">${x.code}</p>`;
+    document.getElementById(selector).appendChild(elem);
 }
 function changeView(element){
     let p=element.nextElementSibling;
