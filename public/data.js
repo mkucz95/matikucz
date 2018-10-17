@@ -2,31 +2,38 @@
 var config = {
     apiKey: "AIzaSyCiGO8rHXu7Q-rzWW0RziG-YWurzbiDy64",
     authDomain: "matikucz-7a596.firebaseapp.com",
-    databaseURL: "https://matikucz-7a596.firebaseio.com/"
+    databaseURL: "https://matikucz-7a596.firebaseio.com/",
+    storagebucket: "matikucz-7a596.appspot.com"
 };
 
 firebase.initializeApp(config);
-
-// Get a reference to the database service
-var database = firebase.database();
-var data = database.ref('/').once('value');
-var pop = data.personalsite
-var econ = JSON.parse(pop.econ);
-var aboutme = JSON.parse(data.aboutMe);
-var current = JSON.parse(data.current);
-var activities = JSON.parse(pop.activities);
-var awards = JSON.parse(pop.awards);
-var books = JSON.parse(pop.books);
-var chinese = JSON.parse(pop.chinese);
-var cse = JSON.parse(pop.cse);
-var experience = JSON.parse(pop.experience);
-var math = JSON.parse(pop.math);
-var projects = JSON.parse(pop.math);
-var references = JSON.parse(pop.references);
-var skills = JSON.parse(pop.skills);
-var techskills = JSON.parse(pop.techskills);
-var tools = JSON.parse(pop.tools);
-var volunteering = JSON.parse(pop.volunteering);
+var data;
+var ref = firebase.database().ref();
+ref.on("value", function(snapshot) {
+   populateInfo(snapshot.val())
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+var econ, aboutme, current, activities, awards, books, chinese, cse, experience, math , projects, references, skills, techskills, tools, volunteering;
+function populateInfo(data){
+    var pop = data.personalsite 
+    econ = pop.econ;
+    aboutme = data.aboutMe;
+    current = data.current;
+    activities = pop.activities;
+    awards = pop.awards;
+    books = pop.books;
+    chinese = pop.chinese;
+    cse = pop.cse;
+    experience = pop.experience;
+    math = pop.math;
+    projects = pop.projects;
+    references = pop.references;
+    skills = pop.skills;
+    techskills = pop.techskills;
+    tools = pop.tools;
+    volunteering = pop.volunteering;
+}
 
 function createEl(x, selector){
     let elem=document.createElement("section");
@@ -121,6 +128,7 @@ const about=`<article><section><h1>Current</h1><p>I am a graduate from UC San Di
 <section><h1>About Me</h1><p>I am a passionate golfer, and I was a team capitain and four-year letter winner with the UCSD Men's Golf team. I chose UC San Diego because of it's renowned academic caliber in the fields that interest me most - economics and computer science. The perfect weather and location, challenging intellectual environment, and demanding collegiate golf are all factors that have contributed to my progress and success as a student-athlete and person.</p>
 <p>I would like to work with businesses, investments, and technologies that deal with social and environmental causes around the world. It is a goal of mine to eventually utilize the languages I know throughout my career.</p>
 <p>I enjoy cooking and all kinds of outdoor activities in my free time. As a California resident, I started to surf two years ago. I also enjoy tennis, basketball, volleyball, table tennis, hiking, or just being at the beach. I am also a passionate traveller and I hope to make it to three new places every year. South America and Africa are the next two continents I have set my sights on. San Diego, CA - is the 6th city in the 6th different country that I have lived in.</p></section>
+<section><h1>Recent Reads</h1><ul></ul></section>
 <section id="contact"> <h1>Contact</h1><a href="tel:1-858-260-4579">(858)-260 4579</a>
 <a href="mailto:mati.kucz95@gmail.com?subject=Reaching Out From Your Website" target="_blank">mati.kucz95@gmail.com</a>
 </section></article>`;
